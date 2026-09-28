@@ -1,0 +1,82 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: ""
+  local_data_file: artifacts/data_ingestion/smd
+  unzip_dir: artifacts/data_ingestion/smd
+
+data_validation:
+  root_dir: artifacts/data_validation
+  status_file: artifacts/data_validation/status.txt
+  required_files:
+    - train
+    - test
+    - test_label
+
+data_preprocessing:
+  root_dir: artifacts/data_preprocessing
+  processed_data_dir: artifacts/data_preprocessing/processed
+  scaler_path: artifacts/data_preprocessing/scaler.pkl
+
+temporal_windowing:
+  root_dir: artifacts/temporal_windowing
+  window_size: 60
+  stride: 1
+
+feature_engineering:
+  root_dir: artifacts/feature_engineering
+  processed_data_dir: artifacts/feature_engineering/processed
+
+baseline_detection:
+  root_dir: artifacts/baseline_detection
+  model_dir: artifacts/baseline_detection/models
+  isolation_forest:
+    n_estimators: 200
+    contamination: 0.05
+    random_state: 42
+
+anomaly_detection:
+  root_dir: artifacts/anomaly_detection
+  model_dir: artifacts/anomaly_detection/models
+  model_name: gru_autoencoder
+  epochs: 30
+  batch_size: 64
+  learning_rate: 0.001
+  hidden_dim: 64
+  latent_dim: 32
+
+threshold_manager:
+  root_dir: artifacts/threshold_manager
+  threshold_file: artifacts/threshold_manager/threshold.json
+  method: percentile
+  percentile: 99
+
+event_correlator:
+  root_dir: artifacts/event_correlator
+  correlation_window: 10
+  minimum_persistence: 5
+
+root_cause:
+  root_dir: artifacts/root_cause
+  top_k: 5
+
+uncertainty:
+  root_dir: artifacts/uncertainty
+  calibration_method: isotonic
+
+drift_detection:
+  root_dir: artifacts/drift_detection
+  method: psi
+  threshold: 0.2
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  report_file: artifacts/model_evaluation/report.json
+
+model_registry:
+  root_dir: artifacts/model_registry
+
+prediction:
+  root_dir: artifacts/prediction
+  prediction_file: artifacts/prediction/prediction.json

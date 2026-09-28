@@ -1,0 +1,12 @@
+target_column: anomaly
+
+machine_column: machine_id
+
+feature_columns: []
+
+sequence:
+  window_size: 60
+
+validation:
+  allow_missing_values: false
+  allow_duplicate_rows: false
