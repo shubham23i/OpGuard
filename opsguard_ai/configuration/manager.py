@@ -45,7 +45,9 @@ class ConfigurationManager:
         return DataValidationConfig(
             root_dir=Path(config.root_dir),
             status_file=Path(config.status_file),
-            required_files=config.required_files
+            data_dir=Path(config.data_dir),
+            expected_machine_count=config.expected_machine_count,
+            expected_feature_count=config.expected_feature_count
         )
 
     def get_data_preprocessing_config(self) -> DataPreprocessingConfig:

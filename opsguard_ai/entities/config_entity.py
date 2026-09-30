@@ -12,7 +12,9 @@ class DataIngestionConfig:
 class DataValidationConfig:
     root_dir: Path
     status_file: Path
-    required_files: list
+    data_dir: Path
+    expected_machine_count: int
+    expected_feature_count: int
 
 
 @dataclass(frozen=True)

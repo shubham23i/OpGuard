@@ -8,10 +8,9 @@ data_ingestion:
 data_validation:
   root_dir: artifacts/data_validation
   status_file: artifacts/data_validation/status.txt
-  required_files:
-    - train
-    - test
-    - test_label
+  data_dir: artifacts/data_ingestion/ServerMachineDataset
+  expected_machine_count: 28
+  expected_feature_count: 38
 
 data_preprocessing:
   root_dir: artifacts/data_preprocessing
