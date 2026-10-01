@@ -20,8 +20,9 @@ class DataValidationConfig:
 @dataclass(frozen=True)
 class DataPreprocessingConfig:
     root_dir: Path
+    input_data_dir: Path
     processed_data_dir: Path
-    scaler_path: Path
+    scaler_dir: Path
 
 
 @dataclass(frozen=True)

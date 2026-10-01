@@ -54,13 +54,17 @@ class ConfigurationManager:
 
         config = self.config.data_preprocessing
 
-        create_directories([config.root_dir])
-        create_directories([config.processed_data_dir])
+        create_directories([
+            config.root_dir,
+            config.processed_data_dir,
+            config.scaler_dir
+        ])
 
         return DataPreprocessingConfig(
             root_dir=Path(config.root_dir),
+            input_data_dir=Path(config.input_data_dir),
             processed_data_dir=Path(config.processed_data_dir),
-            scaler_path=Path(config.scaler_path)
+            scaler_dir=Path(config.scaler_dir)
         )
 
     def get_temporal_windowing_config(self) -> TemporalWindowingConfig:

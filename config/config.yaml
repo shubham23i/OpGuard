@@ -14,8 +14,9 @@ data_validation:
 
 data_preprocessing:
   root_dir: artifacts/data_preprocessing
+  input_data_dir: artifacts/data_ingestion/ServerMachineDataset
   processed_data_dir: artifacts/data_preprocessing/processed
-  scaler_path: artifacts/data_preprocessing/scaler.pkl
+  scaler_dir: artifacts/data_preprocessing/scalers
 
 temporal_windowing:
   root_dir: artifacts/temporal_windowing

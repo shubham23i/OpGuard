@@ -1,15 +1,17 @@
 from opsguard_ai.configuration.manager import ConfigurationManager
-from opsguard_ai.components.data_validation import DataValidation
+from opsguard_ai.components.data_preprocessing import DataPreprocessing
 
 
 config = ConfigurationManager()
 
-data_validation_config = config.get_data_validation_config()
-
-data_validation = DataValidation(
-    config=data_validation_config
+data_preprocessing_config = (
+    config.get_data_preprocessing_config()
 )
 
-status = data_validation.validate_dataset()
+data_preprocessing = DataPreprocessing(
+    config=data_preprocessing_config
+)
 
-print("Validation status:", status)
+data_preprocessing.initiate_data_preprocessing()
+
+print("Data preprocessing completed.")
