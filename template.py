@@ -19,6 +19,8 @@ list_of_files =[
     f"{project_name}/opsguard_ai/components/data_validation.py",
     f"{project_name}/opsguard_ai/components/data_preprocessing.py",
     f"{project_name}/opsguard_ai/components/temporal_windowing.py",
+    f"{project_name}/opsguard_ai/components/label_alignment.py",
+
     f"{project_name}/opsguard_ai/components/feature_engineering.py",
     f"{project_name}/opsguard_ai/components/baseline_detector.py",
     f"{project_name}/opsguard_ai/components/anomaly_detector.py",

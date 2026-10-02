@@ -28,8 +28,19 @@ class DataPreprocessingConfig:
 @dataclass(frozen=True)
 class TemporalWindowingConfig:
     root_dir: Path
+    input_data_dir: Path
+    output_data_dir: Path
     window_size: int
     stride: int
+
+@dataclass(frozen=True)
+class LabelAlignmentConfig:
+    root_dir: Path
+    input_window_dir: Path
+    input_label_dir: Path
+    output_dir: Path
+    window_size: int
+    anomaly_rule: str
 
 
 @dataclass(frozen=True)

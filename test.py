@@ -1,17 +1,17 @@
 from opsguard_ai.configuration.manager import ConfigurationManager
-from opsguard_ai.components.data_preprocessing import DataPreprocessing
+from opsguard_ai.components.label_alignment import LabelAlignment
 
 
 config = ConfigurationManager()
 
-data_preprocessing_config = (
-    config.get_data_preprocessing_config()
+label_alignment_config = (
+    config.get_label_alignment_config()
 )
 
-data_preprocessing = DataPreprocessing(
-    config=data_preprocessing_config
+label_alignment = LabelAlignment(
+    config=label_alignment_config
 )
 
-data_preprocessing.initiate_data_preprocessing()
+label_alignment.initiate_label_alignment()
 
-print("Data preprocessing completed.")
+print("Label alignment completed.")

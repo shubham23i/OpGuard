@@ -6,7 +6,8 @@ from opsguard_ai.entities.config_entity import (
     DataValidationConfig,
     DataPreprocessingConfig,
     TemporalWindowingConfig,
-    FeatureEngineeringConfig
+    FeatureEngineeringConfig,
+    LabelAlignmentConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -71,12 +72,35 @@ class ConfigurationManager:
 
         config = self.config.temporal_windowing
 
-        create_directories([config.root_dir])
+        create_directories([
+            config.root_dir,
+            config.output_data_dir
+        ])
 
         return TemporalWindowingConfig(
             root_dir=Path(config.root_dir),
+            input_data_dir=Path(config.input_data_dir),
+            output_data_dir=Path(config.output_data_dir),
             window_size=config.window_size,
             stride=config.stride
+        )
+
+    def get_label_alignment_config(self) -> LabelAlignmentConfig:
+
+        config = self.config.label_alignment
+
+        create_directories([
+            config.root_dir,
+            config.output_dir
+        ])
+
+        return LabelAlignmentConfig(
+            root_dir=Path(config.root_dir),
+            input_window_dir=Path(config.input_window_dir),
+            input_label_dir=Path(config.input_label_dir),
+            output_dir=Path(config.output_dir),
+            window_size=config.window_size,
+            anomaly_rule=config.anomaly_rule
         )
 
     def get_feature_engineering_config(self) -> FeatureEngineeringConfig:

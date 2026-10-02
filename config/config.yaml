@@ -20,9 +20,19 @@ data_preprocessing:
 
 temporal_windowing:
   root_dir: artifacts/temporal_windowing
+  input_data_dir: artifacts/data_preprocessing/processed
+  output_data_dir: artifacts/temporal_windowing/windows
   window_size: 60
   stride: 1
 
+label_alignment:
+  root_dir: artifacts/label_alignment
+  input_window_dir: artifacts/temporal_windowing/windows
+  input_label_dir: artifacts/data_ingestion/ServerMachineDataset/test_label
+  output_dir: artifacts/label_alignment/labels
+  window_size: 60
+  anomaly_rule: any
+  
 feature_engineering:
   root_dir: artifacts/feature_engineering
   processed_data_dir: artifacts/feature_engineering/processed
