@@ -46,4 +46,32 @@ class LabelAlignmentConfig:
 @dataclass(frozen=True)
 class FeatureEngineeringConfig:
     root_dir: Path
-    processed_data_dir: Path
+    input_data_dir: Path
+    output_data_dir: Path
+    window_size: int
+    rolling_windows: list
+
+@dataclass(frozen=True)
+class BaselineDetectionConfig:
+    root_dir: Path
+    input_data_dir: Path
+    output_data_dir: Path
+    model_dir: Path
+    contamination: float
+    random_state: int
+
+@dataclass(frozen=True)
+class AnomalyDetectionConfig:
+    root_dir: Path
+    input_data_dir: Path
+    model_dir: Path
+    score_dir: Path
+    hidden_size: int
+    latent_size: int
+    num_layers: int
+    dropout: float
+    learning_rate: float
+    batch_size: int
+    epochs: int
+    patience: int
+    random_state: int

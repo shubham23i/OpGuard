@@ -35,25 +35,36 @@ label_alignment:
   
 feature_engineering:
   root_dir: artifacts/feature_engineering
-  processed_data_dir: artifacts/feature_engineering/processed
+  input_data_dir: artifacts/temporal_windowing/windows
+  output_data_dir: artifacts/feature_engineering/features
+  window_size: 60
+  rolling_windows:
+    - 5
+    - 15
+    - 30
 
 baseline_detection:
   root_dir: artifacts/baseline_detection
+  input_data_dir: artifacts/feature_engineering/features
+  output_data_dir: artifacts/baseline_detection/predictions
   model_dir: artifacts/baseline_detection/models
-  isolation_forest:
-    n_estimators: 200
-    contamination: 0.05
-    random_state: 42
+  contamination: 0.01
+  random_state: 42
 
 anomaly_detection:
   root_dir: artifacts/anomaly_detection
+  input_data_dir: artifacts/temporal_windowing/windows
   model_dir: artifacts/anomaly_detection/models
-  model_name: gru_autoencoder
-  epochs: 30
-  batch_size: 64
+  score_dir: artifacts/anomaly_detection/scores
+  hidden_size: 64
+  latent_size: 16
+  num_layers: 1
+  dropout: 0.0
   learning_rate: 0.001
-  hidden_dim: 64
-  latent_dim: 32
+  batch_size: 256
+  epochs: 20
+  patience: 5
+  random_state: 42
 
 threshold_manager:
   root_dir: artifacts/threshold_manager

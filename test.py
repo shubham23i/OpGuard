@@ -1,17 +1,15 @@
 from opsguard_ai.configuration.manager import ConfigurationManager
-from opsguard_ai.components.label_alignment import LabelAlignment
+from opsguard_ai.components.anomaly_detector import AnomalyDetector
 
 
 config = ConfigurationManager()
 
-label_alignment_config = (
-    config.get_label_alignment_config()
+anomaly_config = config.get_anomaly_detection_config()
+
+anomaly_detector = AnomalyDetector(
+    config=anomaly_config
 )
 
-label_alignment = LabelAlignment(
-    config=label_alignment_config
-)
+anomaly_detector.initiate_anomaly_detection()
 
-label_alignment.initiate_label_alignment()
-
-print("Label alignment completed.")
+print("GRU Autoencoder completed.")

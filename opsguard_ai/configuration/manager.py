@@ -7,7 +7,9 @@ from opsguard_ai.entities.config_entity import (
     DataPreprocessingConfig,
     TemporalWindowingConfig,
     FeatureEngineeringConfig,
-    LabelAlignmentConfig
+    LabelAlignmentConfig,
+    BaselineDetectionConfig,
+    AnomalyDetectionConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -104,13 +106,60 @@ class ConfigurationManager:
         )
 
     def get_feature_engineering_config(self) -> FeatureEngineeringConfig:
-
         config = self.config.feature_engineering
 
-        create_directories([config.root_dir])
-        create_directories([config.processed_data_dir])
+        create_directories([
+            config.root_dir,
+            config.output_data_dir
+        ])
 
         return FeatureEngineeringConfig(
             root_dir=Path(config.root_dir),
-            processed_data_dir=Path(config.processed_data_dir)
+            input_data_dir=Path(config.input_data_dir),
+            output_data_dir=Path(config.output_data_dir),
+            window_size=config.window_size,
+            rolling_windows=config.rolling_windows
+        )
+
+    def get_baseline_detection_config(self) -> BaselineDetectionConfig:
+        config = self.config.baseline_detection
+
+        create_directories([
+            config.root_dir,
+            config.output_data_dir,
+            config.model_dir
+        ])
+
+        return BaselineDetectionConfig(
+            root_dir=Path(config.root_dir),
+            input_data_dir=Path(config.input_data_dir),
+            output_data_dir=Path(config.output_data_dir),
+            model_dir=Path(config.model_dir),
+            contamination=config.contamination,
+            random_state=config.random_state
+        )
+
+    def get_anomaly_detection_config(self) -> AnomalyDetectionConfig:
+        config = self.config.anomaly_detection
+
+        create_directories([
+            config.root_dir,
+            config.model_dir,
+            config.score_dir
+        ])
+
+        return AnomalyDetectionConfig(
+            root_dir=Path(config.root_dir),
+            input_data_dir=Path(config.input_data_dir),
+            model_dir=Path(config.model_dir),
+            score_dir=Path(config.score_dir),
+            hidden_size=config.hidden_size,
+            latent_size=config.latent_size,
+            num_layers=config.num_layers,
+            dropout=config.dropout,
+            learning_rate=config.learning_rate,
+            batch_size=config.batch_size,
+            epochs=config.epochs,
+            patience=config.patience,
+            random_state=config.random_state
         )
