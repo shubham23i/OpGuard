@@ -1,0 +1,26 @@
+[ 2026-10-03 21:50:51,660 ] 76 root - INFO - Threshold for machine-1-1: 1.204329 | Anomalous windows: 10612
+[ 2026-10-03 21:50:51,676 ] 76 root - INFO - Threshold for machine-1-2: 4.618033 | Anomalous windows: 479
+[ 2026-10-03 21:50:51,694 ] 76 root - INFO - Threshold for machine-1-3: 3.999633 | Anomalous windows: 866
+[ 2026-10-03 21:50:51,710 ] 76 root - INFO - Threshold for machine-1-4: 1.357768 | Anomalous windows: 1237
+[ 2026-10-03 21:50:51,726 ] 76 root - INFO - Threshold for machine-1-5: 1.507901 | Anomalous windows: 3271
+[ 2026-10-03 21:50:51,743 ] 76 root - INFO - Threshold for machine-1-6: 2.197614 | Anomalous windows: 17815
+[ 2026-10-03 21:50:51,766 ] 76 root - INFO - Threshold for machine-1-7: 6.201460 | Anomalous windows: 362
+[ 2026-10-03 21:50:51,776 ] 76 root - INFO - Threshold for machine-1-8: 1.806752 | Anomalous windows: 917
+[ 2026-10-03 21:50:51,793 ] 76 root - INFO - Threshold for machine-2-1: 5.032872 | Anomalous windows: 425
+[ 2026-10-03 21:50:51,810 ] 76 root - INFO - Threshold for machine-2-2: 3.787871 | Anomalous windows: 2187
+[ 2026-10-03 21:50:51,826 ] 76 root - INFO - Threshold for machine-2-3: 6.226816 | Anomalous windows: 368
+[ 2026-10-03 21:50:51,843 ] 76 root - INFO - Threshold for machine-2-4: 1.063492 | Anomalous windows: 1185
+[ 2026-10-03 21:50:51,862 ] 76 root - INFO - Threshold for machine-2-5: 5.674273 | Anomalous windows: 894
+[ 2026-10-03 21:50:51,876 ] 76 root - INFO - Threshold for machine-2-6: 3.196636 | Anomalous windows: 2191
+[ 2026-10-03 21:50:51,893 ] 76 root - INFO - Threshold for machine-2-7: 5.084393 | Anomalous windows: 499
+[ 2026-10-03 21:50:51,910 ] 76 root - INFO - Threshold for machine-2-8: 1.302660 | Anomalous windows: 14336
+[ 2026-10-03 21:50:51,926 ] 76 root - INFO - Threshold for machine-2-9: 1.817781 | Anomalous windows: 4592
+[ 2026-10-03 21:50:51,943 ] 76 root - INFO - Threshold for machine-3-1: 0.996534 | Anomalous windows: 8349
+[ 2026-10-03 21:50:51,960 ] 76 root - INFO - Threshold for machine-3-10: 3.979848 | Anomalous windows: 659
+[ 2026-10-03 21:50:51,984 ] 76 root - INFO - Threshold for machine-3-11: 4.282288 | Anomalous windows: 8645
+[ 2026-10-03 21:50:51,999 ] 76 root - INFO - Threshold for machine-3-2: 4.164977 | Anomalous windows: 60
+[ 2026-10-03 21:50:52,014 ] 76 root - INFO - Threshold for machine-3-3: 10.037663 | Anomalous windows: 360
+[ 2026-10-03 21:50:52,026 ] 76 root - INFO - Threshold for machine-3-4: 1.976587 | Anomalous windows: 21005
+[ 2026-10-03 21:50:52,043 ] 76 root - INFO - Threshold for machine-3-5: 2.398744 | Anomalous windows: 9737
+[ 2026-10-03 21:50:52,060 ] 76 root - INFO - Threshold for machine-3-6: 2.778552 | Anomalous windows: 3548
+[ 2026-10-03 21:50:52,060 ] 94 root - INFO - Threshold management completed successfully.

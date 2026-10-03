@@ -68,9 +68,10 @@ anomaly_detection:
 
 threshold_manager:
   root_dir: artifacts/threshold_manager
-  threshold_file: artifacts/threshold_manager/threshold.json
-  method: percentile
-  percentile: 99
+  input_score_dir: artifacts/anomaly_detection/scores
+  output_prediction_dir: artifacts/threshold_manager/predictions
+  threshold_method: percentile
+  percentile: 99.0
 
 event_correlator:
   root_dir: artifacts/event_correlator

@@ -9,7 +9,8 @@ from opsguard_ai.entities.config_entity import (
     FeatureEngineeringConfig,
     LabelAlignmentConfig,
     BaselineDetectionConfig,
-    AnomalyDetectionConfig
+    AnomalyDetectionConfig,
+    ThresholdManagerConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -162,4 +163,20 @@ class ConfigurationManager:
             epochs=config.epochs,
             patience=config.patience,
             random_state=config.random_state
+        )
+
+    def get_threshold_manager_config(self) -> ThresholdManagerConfig:
+        config = self.config.threshold_manager
+
+        create_directories([
+            config.root_dir,
+            config.output_prediction_dir
+        ])
+
+        return ThresholdManagerConfig(
+            root_dir=Path(config.root_dir),
+            input_score_dir=Path(config.input_score_dir),
+            output_prediction_dir=Path(config.output_prediction_dir),
+            threshold_method=config.threshold_method,
+            percentile=config.percentile
         )

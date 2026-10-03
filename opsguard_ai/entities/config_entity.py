@@ -75,3 +75,12 @@ class AnomalyDetectionConfig:
     epochs: int
     patience: int
     random_state: int
+
+
+@dataclass(frozen=True)
+class ThresholdManagerConfig:
+    root_dir: Path
+    input_score_dir: Path
+    output_prediction_dir: Path
+    threshold_method: str
+    percentile: float   
