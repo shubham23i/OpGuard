@@ -1,15 +1,15 @@
 from opsguard_ai.configuration.manager import ConfigurationManager
-from opsguard_ai.components.threshold_manager import ThresholdManager
+from opsguard_ai.components.event_correlator import EventCorrelator
 
 
 config = ConfigurationManager()
 
-threshold_config = config.get_threshold_manager_config()
+event_config = config.get_event_correlator_config()
 
-threshold_manager = ThresholdManager(
-    config=threshold_config
+event_correlator = EventCorrelator(
+    config=event_config
 )
 
-threshold_manager.initiate_threshold_management()
+event_correlator.initiate_event_correlation()
 
-print("Threshold management completed.")
+print("Event correlation completed.")

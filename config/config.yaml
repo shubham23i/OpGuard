@@ -75,8 +75,10 @@ threshold_manager:
 
 event_correlator:
   root_dir: artifacts/event_correlator
-  correlation_window: 10
-  minimum_persistence: 5
+  input_prediction_dir: artifacts/threshold_manager/predictions/test
+  output_event_dir: artifacts/event_correlator/events
+  max_gap: 5
+  min_event_length: 2
 
 root_cause:
   root_dir: artifacts/root_cause

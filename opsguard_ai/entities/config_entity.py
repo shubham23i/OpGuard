@@ -84,3 +84,11 @@ class ThresholdManagerConfig:
     output_prediction_dir: Path
     threshold_method: str
     percentile: float   
+
+@dataclass(frozen=True)
+class EventCorrelatorConfig:
+    root_dir: Path
+    input_prediction_dir: Path
+    output_event_dir: Path
+    max_gap: int
+    min_event_length: int

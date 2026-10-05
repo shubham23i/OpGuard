@@ -10,7 +10,8 @@ from opsguard_ai.entities.config_entity import (
     LabelAlignmentConfig,
     BaselineDetectionConfig,
     AnomalyDetectionConfig,
-    ThresholdManagerConfig
+    ThresholdManagerConfig,
+    EventCorrelatorConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -179,4 +180,20 @@ class ConfigurationManager:
             output_prediction_dir=Path(config.output_prediction_dir),
             threshold_method=config.threshold_method,
             percentile=config.percentile
+        )
+
+    def get_event_correlator_config(self) -> EventCorrelatorConfig:
+        config = self.config.event_correlator
+
+        create_directories([
+            config.root_dir,
+            config.output_event_dir
+        ])
+
+        return EventCorrelatorConfig(
+            root_dir=Path(config.root_dir),
+            input_prediction_dir=Path(config.input_prediction_dir),
+            output_event_dir=Path(config.output_event_dir),
+            max_gap=config.max_gap,
+            min_event_length=config.min_event_length
         )
