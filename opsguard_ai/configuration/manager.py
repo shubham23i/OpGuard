@@ -11,7 +11,8 @@ from opsguard_ai.entities.config_entity import (
     BaselineDetectionConfig,
     AnomalyDetectionConfig,
     ThresholdManagerConfig,
-    EventCorrelatorConfig
+    EventCorrelatorConfig,
+    RootCauseConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -196,4 +197,23 @@ class ConfigurationManager:
             output_event_dir=Path(config.output_event_dir),
             max_gap=config.max_gap,
             min_event_length=config.min_event_length
+        )
+
+    def get_root_cause_config(self) -> RootCauseConfig:
+        config = self.config.root_cause
+
+        create_directories([
+            config.root_dir,
+            config.output_dir
+        ])
+
+        return RootCauseConfig(
+            root_dir=Path(config.root_dir),
+            input_window_dir=Path(config.input_window_dir),
+            input_score_dir=Path(config.input_score_dir),
+            input_event_dir=Path(config.input_event_dir),
+            model_dir=Path(config.model_dir),
+            output_dir=Path(config.output_dir),
+            top_k=config.top_k,
+            batch_size=config.batch_size
         )

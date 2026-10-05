@@ -82,7 +82,13 @@ event_correlator:
 
 root_cause:
   root_dir: artifacts/root_cause
+  input_window_dir: artifacts/temporal_windowing/windows
+  input_score_dir: artifacts/anomaly_detection/scores/test
+  input_event_dir: artifacts/event_correlator/events
+  model_dir: artifacts/anomaly_detection/models
+  output_dir: artifacts/root_cause/candidates
   top_k: 5
+  batch_size: 256
 
 uncertainty:
   root_dir: artifacts/uncertainty

@@ -92,3 +92,14 @@ class EventCorrelatorConfig:
     output_event_dir: Path
     max_gap: int
     min_event_length: int
+
+@dataclass(frozen=True)
+class RootCauseConfig:
+    root_dir: Path
+    input_window_dir: Path
+    input_score_dir: Path
+    input_event_dir: Path
+    model_dir: Path
+    output_dir: Path
+    top_k: int
+    batch_size: int

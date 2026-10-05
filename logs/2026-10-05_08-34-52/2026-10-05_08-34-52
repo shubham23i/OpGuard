@@ -1,0 +1,26 @@
+[ 2026-10-05 08:34:56,518 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-1 | Events: 20
+[ 2026-10-05 08:35:00,244 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-2 | Events: 8
+[ 2026-10-05 08:35:04,399 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-3 | Events: 3
+[ 2026-10-05 08:35:07,554 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-4 | Events: 10
+[ 2026-10-05 08:35:11,101 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-5 | Events: 44
+[ 2026-10-05 08:35:14,479 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-6 | Events: 9
+[ 2026-10-05 08:35:17,792 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-7 | Events: 6
+[ 2026-10-05 08:35:21,322 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-8 | Events: 8
+[ 2026-10-05 08:35:24,770 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-1 | Events: 6
+[ 2026-10-05 08:35:28,291 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-2 | Events: 30
+[ 2026-10-05 08:35:31,733 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-3 | Events: 6
+[ 2026-10-05 08:35:35,283 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-4 | Events: 18
+[ 2026-10-05 08:35:38,730 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-5 | Events: 10
+[ 2026-10-05 08:35:43,057 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-6 | Events: 11
+[ 2026-10-05 08:35:46,597 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-7 | Events: 3
+[ 2026-10-05 08:35:50,147 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-8 | Events: 12
+[ 2026-10-05 08:35:54,471 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-9 | Events: 48
+[ 2026-10-05 08:35:58,716 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-1 | Events: 20
+[ 2026-10-05 08:36:02,217 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-10 | Events: 5
+[ 2026-10-05 08:36:06,546 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-11 | Events: 7
+[ 2026-10-05 08:36:10,044 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-2 | Events: 1
+[ 2026-10-05 08:36:13,545 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-3 | Events: 6
+[ 2026-10-05 08:36:17,195 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-4 | Events: 2
+[ 2026-10-05 08:36:20,764 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-5 | Events: 21
+[ 2026-10-05 08:36:25,655 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-6 | Events: 24
+[ 2026-10-05 08:36:25,655 ] 182 root - INFO - Root-cause candidate analysis completed successfully.
