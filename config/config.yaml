@@ -92,12 +92,23 @@ root_cause:
 
 uncertainty:
   root_dir: artifacts/uncertainty
-  calibration_method: isotonic
+  input_window_dir: artifacts/temporal_windowing/windows
+  input_score_dir: artifacts/anomaly_detection/scores
+  output_dir: artifacts/uncertainty/results
+  contamination: 0.01
+  percentile: 99.0
+  random_state: 42
 
 drift_detection:
   root_dir: artifacts/drift_detection
+  input_data_dir: artifacts/data_preprocessing/processed
+  output_dir: artifacts/drift_detection/reports
+  reference_split: train
+  current_split: test
   method: psi
-  threshold: 0.2
+  psi_threshold: 0.2
+  bins: 10
+  epsilon: 0.000001
 
 model_evaluation:
   root_dir: artifacts/model_evaluation

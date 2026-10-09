@@ -1,9 +1,18 @@
-from opsguard_ai.configuration.manager import ConfigurationManager
-from opsguard_ai.components.data_ingestion import DataIngestion
 
+from pathlib import Path
 
-config = ConfigurationManager()
-data_ingestion_config = config.get_data_ingestion_config()
+base = Path("artifacts/data_preprocessing/processed")
 
-data_ingestion = DataIngestion(config=data_ingestion_config)
-data_ingestion.initiate_data_ingestion()
+print("Processed directory:", base.resolve())
+print("Directory exists:", base.exists())
+
+if base.exists():
+    files = [path for path in base.rglob("*") if path.is_file()]
+
+    print(f"\nTotal files found: {len(files)}")
+
+    for path in files[:100]:
+        print(f"{path}  |  {path.suffix}")
+
+    if not files:
+        print("\nNo files found anywhere under processed/.")

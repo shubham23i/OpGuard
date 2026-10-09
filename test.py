@@ -1,15 +1,17 @@
+
 from opsguard_ai.configuration.manager import ConfigurationManager
-from opsguard_ai.components.root_cause import RootCauseAnalyzer
+from opsguard_ai.components.drift_detector import DriftDetector
 
 
-config = ConfigurationManager()
+def main():
+    config = ConfigurationManager().get_drift_detection_config()
+    detector = DriftDetector(config)
 
-root_cause_config = config.get_root_cause_config()
+    summary = detector.initiate_drift_detection()
 
-analyzer = RootCauseAnalyzer(
-    config=root_cause_config
-)
+    print("Drift Detection Completed")
+    print(summary)
 
-analyzer.initiate_root_cause_analysis()
 
-print("Root-cause candidate analysis completed.")
+if __name__ == "__main__":
+    main()

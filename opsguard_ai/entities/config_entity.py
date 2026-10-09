@@ -103,3 +103,25 @@ class RootCauseConfig:
     output_dir: Path
     top_k: int
     batch_size: int
+
+@dataclass(frozen=True)
+class UncertaintyConfig:
+    root_dir: Path
+    input_window_dir: Path
+    input_score_dir: Path
+    output_dir: Path
+    contamination: float
+    percentile: float
+    random_state: int
+
+@dataclass
+class DriftDetectionConfig:
+    root_dir: Path
+    input_data_dir: Path
+    output_dir: Path
+    reference_split: str
+    current_split: str
+    method: str
+    psi_threshold: float
+    bins: int
+    epsilon: float

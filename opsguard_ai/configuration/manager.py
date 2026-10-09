@@ -12,7 +12,9 @@ from opsguard_ai.entities.config_entity import (
     AnomalyDetectionConfig,
     ThresholdManagerConfig,
     EventCorrelatorConfig,
-    RootCauseConfig
+    RootCauseConfig,
+    UncertaintyConfig,
+    DriftDetectionConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -216,4 +218,40 @@ class ConfigurationManager:
             output_dir=Path(config.output_dir),
             top_k=config.top_k,
             batch_size=config.batch_size
+        )
+
+    def get_uncertainty_config(self) -> UncertaintyConfig:
+        config = self.config.uncertainty
+
+        create_directories([
+            config.root_dir,
+            config.output_dir
+        ])
+
+        return UncertaintyConfig(
+            root_dir=Path(config.root_dir),
+            input_window_dir=Path(config.input_window_dir),
+            input_score_dir=Path(config.input_score_dir),
+            output_dir=Path(config.output_dir),
+            contamination=config.contamination,
+            percentile=config.percentile,
+            random_state=config.random_state
+        )
+
+    
+    def get_drift_detection_config(self) -> DriftDetectionConfig:
+        config = self.config.drift_detection
+
+        create_directories([config.root_dir, config.output_dir])
+
+        return DriftDetectionConfig(
+            root_dir=Path(config.root_dir),
+            input_data_dir=Path(config.input_data_dir),
+            output_dir=Path(config.output_dir),
+            reference_split=config.reference_split,
+            current_split=config.current_split,
+            method=config.method,
+            psi_threshold=float(config.psi_threshold),
+            bins=int(config.bins),
+            epsilon=float(config.epsilon),
         )
