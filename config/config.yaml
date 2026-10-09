@@ -110,9 +110,12 @@ drift_detection:
   bins: 10
   epsilon: 0.000001
 
+
 model_evaluation:
   root_dir: artifacts/model_evaluation
-  report_file: artifacts/model_evaluation/report.json
+  input_label_dir: artifacts/label_alignment/labels
+  input_prediction_dir: artifacts/threshold_manager/predictions/test
+  output_dir: artifacts/model_evaluation/reports
 
 model_registry:
   root_dir: artifacts/model_registry

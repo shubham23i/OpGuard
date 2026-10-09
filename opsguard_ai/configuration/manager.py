@@ -14,7 +14,8 @@ from opsguard_ai.entities.config_entity import (
     EventCorrelatorConfig,
     RootCauseConfig,
     UncertaintyConfig,
-    DriftDetectionConfig
+    DriftDetectionConfig,
+    ModelEvaluationConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -254,4 +255,19 @@ class ConfigurationManager:
             psi_threshold=float(config.psi_threshold),
             bins=int(config.bins),
             epsilon=float(config.epsilon),
+        )
+    
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+
+        create_directories([
+            config.root_dir,
+            config.output_dir,
+        ])
+
+        return ModelEvaluationConfig(
+            root_dir=Path(config.root_dir),
+            input_label_dir=Path(config.input_label_dir),
+            input_prediction_dir=Path(config.input_prediction_dir),
+            output_dir=Path(config.output_dir),
         )

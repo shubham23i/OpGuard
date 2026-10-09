@@ -125,3 +125,11 @@ class DriftDetectionConfig:
     psi_threshold: float
     bins: int
     epsilon: float
+
+
+@dataclass
+class ModelEvaluationConfig:
+    root_dir: Path
+    input_label_dir: Path
+    input_prediction_dir: Path
+    output_dir: Path

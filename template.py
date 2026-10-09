@@ -30,6 +30,8 @@ list_of_files =[
     f"{project_name}/opsguard_ai/components/uncertainty.py",
     f"{project_name}/opsguard_ai/components/explainability.py",
     f"{project_name}/opsguard_ai/components/drift_detector.py",
+    f"{project_name}/opsguard_ai/components/drift_detector.py",
+    f"{project_name}/opsguard_ai/components/model_evaluation.py",
     f"{project_name}/opsguard_ai/components/incident_manager.py",
     f"{project_name}/opsguard_ai/components/decision_engine.py",
 
