@@ -133,3 +133,29 @@ class ModelEvaluationConfig:
     input_label_dir: Path
     input_prediction_dir: Path
     output_dir: Path
+
+
+@dataclass
+class ModelRegistryConfig:
+    root_dir: Path
+    model_dir: Path
+    threshold_file: Path
+    evaluation_report_dir: Path
+    registry_dir: Path
+    metadata_file: Path
+
+
+@dataclass
+class PredictionConfig:
+    root_dir: Path
+    input_data_dir: Path
+    scaler_dir: Path
+    model_dir: Path
+    threshold_file: Path
+    output_dir: Path
+    window_size: int
+    hidden_size: int
+    latent_size: int
+    num_layers: int
+    dropout: float
+    batch_size: int

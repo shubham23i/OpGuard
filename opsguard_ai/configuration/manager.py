@@ -15,7 +15,9 @@ from opsguard_ai.entities.config_entity import (
     RootCauseConfig,
     UncertaintyConfig,
     DriftDetectionConfig,
-    ModelEvaluationConfig
+    ModelEvaluationConfig,
+    ModelRegistryConfig,
+    PredictionConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -270,4 +272,45 @@ class ConfigurationManager:
             input_label_dir=Path(config.input_label_dir),
             input_prediction_dir=Path(config.input_prediction_dir),
             output_dir=Path(config.output_dir),
+        )
+
+    
+    def get_model_registry_config(self) -> ModelRegistryConfig:
+        config = self.config.model_registry
+
+        create_directories([
+            config.root_dir,
+            config.registry_dir,
+        ])
+
+        return ModelRegistryConfig(
+            root_dir=Path(config.root_dir),
+            model_dir=Path(config.model_dir),
+            threshold_file=Path(config.threshold_file),
+            evaluation_report_dir=Path(config.evaluation_report_dir),
+            registry_dir=Path(config.registry_dir),
+            metadata_file=Path(config.metadata_file),
+        )
+    
+    def get_prediction_config(self) -> PredictionConfig:
+        config = self.config.prediction
+
+        create_directories([
+            config.root_dir,
+            config.output_dir,
+        ])
+
+        return PredictionConfig(
+            root_dir=Path(config.root_dir),
+            input_data_dir=Path(config.input_data_dir),
+            scaler_dir=Path(config.scaler_dir),
+            model_dir=Path(config.model_dir),
+            threshold_file=Path(config.threshold_file),
+            output_dir=Path(config.output_dir),
+            window_size=int(config.window_size),
+            hidden_size=int(config.hidden_size),
+            latent_size=int(config.latent_size),
+            num_layers=int(config.num_layers),
+            dropout=float(config.dropout),
+            batch_size=int(config.batch_size),
         )

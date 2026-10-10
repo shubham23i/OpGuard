@@ -117,9 +117,27 @@ model_evaluation:
   input_prediction_dir: artifacts/threshold_manager/predictions/test
   output_dir: artifacts/model_evaluation/reports
 
+
 model_registry:
   root_dir: artifacts/model_registry
+  model_dir: artifacts/anomaly_detection/models
+  threshold_file: artifacts/threshold_manager/thresholds.npy
+  evaluation_report_dir: artifacts/model_evaluation/reports
+  registry_dir: artifacts/model_registry/versions
+  metadata_file: artifacts/model_registry/registry.json
+
+
 
 prediction:
   root_dir: artifacts/prediction
-  prediction_file: artifacts/prediction/prediction.json
+  input_data_dir: artifacts/data_preprocessing/processed
+  scaler_dir: artifacts/data_preprocessing/scalers
+  model_dir: artifacts/anomaly_detection/models
+  threshold_file: artifacts/threshold_manager/thresholds.npy
+  output_dir: artifacts/prediction/results
+  window_size: 60
+  hidden_size: 64
+  latent_size: 16
+  num_layers: 1
+  dropout: 0.0
+  batch_size: 256
