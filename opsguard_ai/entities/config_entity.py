@@ -159,3 +159,15 @@ class PredictionConfig:
     num_layers: int
     dropout: float
     batch_size: int
+
+
+@dataclass
+class IncidentManagerConfig:
+    root_dir: Path
+    input_event_dir: Path
+    input_root_cause_dir: Path
+    input_uncertainty_dir: Path
+    input_explainability_dir: Path
+    output_dir: Path
+    high_risk_threshold: float
+    medium_risk_threshold: float

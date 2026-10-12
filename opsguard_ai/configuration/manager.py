@@ -17,7 +17,8 @@ from opsguard_ai.entities.config_entity import (
     DriftDetectionConfig,
     ModelEvaluationConfig,
     ModelRegistryConfig,
-    PredictionConfig
+    PredictionConfig,
+    IncidentManagerConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -313,4 +314,24 @@ class ConfigurationManager:
             num_layers=int(config.num_layers),
             dropout=float(config.dropout),
             batch_size=int(config.batch_size),
+        )
+
+    
+    def get_incident_manager_config(self) -> IncidentManagerConfig:
+        config = self.config.incident_manager
+
+        create_directories([
+            config.root_dir,
+            config.output_dir,
+        ])
+
+        return IncidentManagerConfig(
+            root_dir=Path(config.root_dir),
+            input_event_dir=Path(config.input_event_dir),
+            input_root_cause_dir=Path(config.input_root_cause_dir),
+            input_uncertainty_dir=Path(config.input_uncertainty_dir),
+            input_explainability_dir=Path(config.input_explainability_dir),
+            output_dir=Path(config.output_dir),
+            high_risk_threshold=float(config.high_risk_threshold),
+            medium_risk_threshold=float(config.medium_risk_threshold),
         )

@@ -141,3 +141,14 @@ prediction:
   num_layers: 1
   dropout: 0.0
   batch_size: 256
+
+
+incident_manager:
+  root_dir: artifacts/incident_manager
+  input_event_dir: artifacts/event_correlator/events
+  input_root_cause_dir: artifacts/root_cause/candidates
+  input_uncertainty_dir: artifacts/uncertainty/results
+  input_explainability_dir: artifacts/explainability/reports
+  output_dir: artifacts/incident_manager/incidents
+  high_risk_threshold: 0.8
+  medium_risk_threshold: 0.5
