@@ -171,3 +171,13 @@ class IncidentManagerConfig:
     output_dir: Path
     high_risk_threshold: float
     medium_risk_threshold: float
+
+@dataclass
+class DecisionEngineConfig:
+    root_dir: Path
+    input_incident_dir: Path
+    output_dir: Path
+    high_priority_threshold: float
+    medium_priority_threshold: float
+    duration_weight: float
+    ood_weight: float

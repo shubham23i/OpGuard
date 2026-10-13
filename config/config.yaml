@@ -152,3 +152,12 @@ incident_manager:
   output_dir: artifacts/incident_manager/incidents
   high_risk_threshold: 0.8
   medium_risk_threshold: 0.5
+
+decision_engine:
+  root_dir: artifacts/decision_engine
+  input_incident_dir: artifacts/incident_manager/incidents
+  output_dir: artifacts/decision_engine/decisions
+  high_priority_threshold: 0.80
+  medium_priority_threshold: 0.50
+  duration_weight: 0.15
+  ood_weight: 0.10

@@ -18,7 +18,8 @@ from opsguard_ai.entities.config_entity import (
     ModelEvaluationConfig,
     ModelRegistryConfig,
     PredictionConfig,
-    IncidentManagerConfig
+    IncidentManagerConfig,
+    DecisionEngineConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -334,4 +335,19 @@ class ConfigurationManager:
             output_dir=Path(config.output_dir),
             high_risk_threshold=float(config.high_risk_threshold),
             medium_risk_threshold=float(config.medium_risk_threshold),
+        )
+
+    def get_decision_engine_config(self) -> DecisionEngineConfig:
+        config = self.config.decision_engine
+
+        create_directories([config.root_dir, config.output_dir])
+
+        return DecisionEngineConfig(
+            root_dir=Path(config.root_dir),
+            input_incident_dir=Path(config.input_incident_dir),
+            output_dir=Path(config.output_dir),
+            high_priority_threshold=config.high_priority_threshold,
+            medium_priority_threshold=config.medium_priority_threshold,
+            duration_weight=config.duration_weight,
+            ood_weight=config.ood_weight,
         )
