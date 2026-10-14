@@ -1,19 +1,19 @@
 from opsguard_ai.configuration.manager import ConfigurationManager
-from opsguard_ai.components.decision_engine import DecisionEngine
+from opsguard_ai.components.alert_manager import AlertManager
 
 
 if __name__ == "__main__":
-    config = ConfigurationManager().get_decision_engine_config()
-    engine = DecisionEngine(config)
+    config = ConfigurationManager().get_alert_manager_config()
+    manager = AlertManager(config)
 
-    decisions = engine.initiate_decision_engine()
+    alerts = manager.initiate_alert_manager()
 
-    print(f"Generated {len(decisions)} decisions")
+    print(f"Total alerts: {len(alerts)}")
 
-    for decision in decisions[:5]:
+    for alert in alerts[:5]:
         print(
-            decision["machine"],
-            decision["priority"],
-            decision["priority_score"],
-            decision["recommended_action"],
+            alert["alert_id"],
+            alert["priority"],
+            alert["machine"],
+            alert["delivery_status"],
         )

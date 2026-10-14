@@ -19,7 +19,8 @@ from opsguard_ai.entities.config_entity import (
     ModelRegistryConfig,
     PredictionConfig,
     IncidentManagerConfig,
-    DecisionEngineConfig
+    DecisionEngineConfig,
+    AlertManagerConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -350,4 +351,15 @@ class ConfigurationManager:
             medium_priority_threshold=config.medium_priority_threshold,
             duration_weight=config.duration_weight,
             ood_weight=config.ood_weight,
+        )
+    def get_alert_manager_config(self) -> AlertManagerConfig:
+        config = self.config.alert_manager
+
+        create_directories([config.root_dir, config.output_dir])
+
+        return AlertManagerConfig(
+            root_dir=Path(config.root_dir),
+            input_decisions_file=Path(config.input_decisions_file),
+            output_dir=Path(config.output_dir),
+            deduplicate=config.deduplicate,
         )

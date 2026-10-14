@@ -161,3 +161,9 @@ decision_engine:
   medium_priority_threshold: 0.50
   duration_weight: 0.15
   ood_weight: 0.10
+
+alert_manager:
+  root_dir: artifacts/alert_manager
+  input_decisions_file: artifacts/decision_engine/decisions/decisions.json
+  output_dir: artifacts/alert_manager/alerts
+  deduplicate: true

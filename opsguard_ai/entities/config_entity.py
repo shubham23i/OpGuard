@@ -181,3 +181,10 @@ class DecisionEngineConfig:
     medium_priority_threshold: float
     duration_weight: float
     ood_weight: float
+
+@dataclass
+class AlertManagerConfig:
+    root_dir: Path
+    input_decisions_file: Path
+    output_dir: Path
+    deduplicate: bool
