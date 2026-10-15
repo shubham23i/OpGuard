@@ -167,3 +167,7 @@ alert_manager:
   input_decisions_file: artifacts/decision_engine/decisions/decisions.json
   output_dir: artifacts/alert_manager/alerts
   deduplicate: true
+
+pipeline_monitoring:
+  root_dir: artifacts/pipeline_monitoring
+  output_dir: artifacts/pipeline_monitoring/reports

@@ -1,0 +1,2 @@
+[ 2026-10-15 09:13:01,910 ] 95 root - INFO - Component anomaly_detector recorded with status SUCCESS
+[ 2026-10-15 09:13:01,920 ] 95 root - INFO - Component drift_detector recorded with status FAILED

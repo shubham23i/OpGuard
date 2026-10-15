@@ -20,7 +20,8 @@ from opsguard_ai.entities.config_entity import (
     PredictionConfig,
     IncidentManagerConfig,
     DecisionEngineConfig,
-    AlertManagerConfig
+    AlertManagerConfig,
+    PipelineMonitoringConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -362,4 +363,14 @@ class ConfigurationManager:
             input_decisions_file=Path(config.input_decisions_file),
             output_dir=Path(config.output_dir),
             deduplicate=config.deduplicate,
+        )
+
+    def get_pipeline_monitoring_config(self) -> PipelineMonitoringConfig:
+        config = self.config.pipeline_monitoring
+
+        create_directories([config.root_dir, config.output_dir])
+
+        return PipelineMonitoringConfig(
+            root_dir=Path(config.root_dir),
+            output_dir=Path(config.output_dir),
         )

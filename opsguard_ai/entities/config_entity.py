@@ -188,3 +188,8 @@ class AlertManagerConfig:
     input_decisions_file: Path
     output_dir: Path
     deduplicate: bool
+
+@dataclass
+class PipelineMonitoringConfig:
+    root_dir: Path
+    output_dir: Path
