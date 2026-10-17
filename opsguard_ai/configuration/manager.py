@@ -21,7 +21,8 @@ from opsguard_ai.entities.config_entity import (
     IncidentManagerConfig,
     DecisionEngineConfig,
     AlertManagerConfig,
-    PipelineMonitoringConfig
+    PipelineMonitoringConfig,
+    ExplainabilityConfig
 )
 from opsguard_ai.utils.common import read_yaml, create_directories
 
@@ -373,4 +374,22 @@ class ConfigurationManager:
         return PipelineMonitoringConfig(
             root_dir=Path(config.root_dir),
             output_dir=Path(config.output_dir),
+        )
+    def get_explainability_config(self) -> ExplainabilityConfig:
+        config = self.config.explainability
+
+        create_directories([
+            config.root_dir,
+            config.output_dir,
+        ])
+
+        return ExplainabilityConfig(
+            root_dir=Path(config.root_dir),
+            input_window_dir=Path(config.input_window_dir),
+            input_score_dir=Path(config.input_score_dir),
+            input_prediction_dir=Path(config.input_prediction_dir),
+            model_dir=Path(config.model_dir),
+            output_dir=Path(config.output_dir),
+            top_k=config.top_k,
+            batch_size=config.batch_size,
         )

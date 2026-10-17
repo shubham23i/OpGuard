@@ -193,3 +193,18 @@ class AlertManagerConfig:
 class PipelineMonitoringConfig:
     root_dir: Path
     output_dir: Path
+
+from dataclasses import dataclass
+from pathlib import Path
+
+
+@dataclass
+class ExplainabilityConfig:
+    root_dir: Path
+    input_window_dir: Path
+    input_score_dir: Path
+    input_prediction_dir: Path
+    model_dir: Path
+    output_dir: Path
+    top_k: int
+    batch_size: int

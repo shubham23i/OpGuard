@@ -171,3 +171,13 @@ alert_manager:
 pipeline_monitoring:
   root_dir: artifacts/pipeline_monitoring
   output_dir: artifacts/pipeline_monitoring/reports
+
+explainability:
+  root_dir: artifacts/explainability
+  input_window_dir: artifacts/temporal_windowing/windows
+  input_score_dir: artifacts/anomaly_detection/scores
+  input_prediction_dir: artifacts/threshold_manager/predictions/test
+  model_dir: artifacts/anomaly_detection/models
+  output_dir: artifacts/explainability/reports
+  top_k: 5
+  batch_size: 256
