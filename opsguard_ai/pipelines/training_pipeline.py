@@ -15,6 +15,13 @@ from opsguard_ai.components.drift_detector import DriftDetector
 from opsguard_ai.components.model_evaluation import ModelEvaluation
 from opsguard_ai.components.model_registry import ModelRegistry
 from opsguard_ai.components.pipeline_monitoring import PipelineMonitor
+from opsguard_ai.components.event_correlator import EventCorrelator
+from opsguard_ai.components.root_cause import RootCauseAnalyzer
+from opsguard_ai.components.uncertainty import UncertaintyAnalyzer
+from opsguard_ai.components.explainability import Explainability
+from opsguard_ai.components.incident_manager import IncidentManager
+from opsguard_ai.components.decision_engine import DecisionEngine
+from opsguard_ai.components.alert_manager import AlertManager
 from opsguard_ai.utils.logger import logging
 
 
@@ -151,6 +158,55 @@ class TrainingPipeline:
                     self.config_manager.get_model_registry_config()
                 ),
                 "initiate_registration"
+            ),
+            (
+                "event_correlation",
+                EventCorrelator(
+                    self.config_manager.get_event_correlator_config()
+                ),
+                "initiate_event_correlation"
+            ),
+            (
+                "root_cause_analysis",
+                RootCauseAnalyzer(
+                    self.config_manager.get_root_cause_config()
+                ),
+                "initiate_root_cause_analysis"
+            ),
+            (
+                "uncertainty_analysis",
+                UncertaintyAnalyzer(
+                    self.config_manager.get_uncertainty_config()
+                ),
+                "initiate_uncertainty_analysis"
+            ),
+            (
+                "explainability",
+                Explainability(
+                    self.config_manager.get_explainability_config()
+                ),
+                "initiate_explainability"
+            ),
+            (
+                "incident_management",
+                IncidentManager(
+                    self.config_manager.get_incident_manager_config()
+                ),
+                "initiate_incident_management"
+            ),
+            (
+                "decision_engine",
+                DecisionEngine(
+                    self.config_manager.get_decision_engine_config()
+                ),
+                "initiate_decision_engine"
+            ),
+            (
+                "alert_management",
+                AlertManager(
+                    self.config_manager.get_alert_manager_config()
+                ),
+                "initiate_alert_manager"
             )
         ]
 
