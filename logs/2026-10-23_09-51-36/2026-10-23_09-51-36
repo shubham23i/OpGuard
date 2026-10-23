@@ -1,0 +1,945 @@
+[ 2026-10-23 09:51:43,204 ] 73 root - INFO - Starting OpsGuard AI training pipeline
+[ 2026-10-23 09:51:43,204 ] 41 root - INFO - Starting pipeline stage: data_ingestion
+[ 2026-10-23 09:51:45,442 ] 30 root - INFO - SMD dataset copied from artifacts\data\ServerMachineDataset to artifacts\data_ingestion\ServerMachineDataset
+[ 2026-10-23 09:51:45,453 ] 95 root - INFO - Component data_ingestion recorded with status SUCCESS
+[ 2026-10-23 09:51:45,453 ] 51 root - INFO - Completed pipeline stage: data_ingestion
+[ 2026-10-23 09:51:45,453 ] 41 root - INFO - Starting pipeline stage: data_validation
+[ 2026-10-23 09:51:50,321 ] 95 root - INFO - Component data_validation recorded with status SUCCESS
+[ 2026-10-23 09:51:50,321 ] 51 root - INFO - Completed pipeline stage: data_validation
+[ 2026-10-23 09:51:50,322 ] 41 root - INFO - Starting pipeline stage: data_preprocessing
+[ 2026-10-23 09:51:54,145 ] 103 root - INFO - Preprocessed machine-1-1; protected 7 low-scale features
+[ 2026-10-23 09:51:57,246 ] 103 root - INFO - Preprocessed machine-1-2; protected 2 low-scale features
+[ 2026-10-23 09:52:00,316 ] 103 root - INFO - Preprocessed machine-1-3; protected 5 low-scale features
+[ 2026-10-23 09:52:03,617 ] 103 root - INFO - Preprocessed machine-1-4; protected 7 low-scale features
+[ 2026-10-23 09:52:06,824 ] 103 root - INFO - Preprocessed machine-1-5; protected 6 low-scale features
+[ 2026-10-23 09:52:10,384 ] 103 root - INFO - Preprocessed machine-1-6; protected 4 low-scale features
+[ 2026-10-23 09:52:13,525 ] 103 root - INFO - Preprocessed machine-1-7; protected 5 low-scale features
+[ 2026-10-23 09:52:16,230 ] 103 root - INFO - Preprocessed machine-1-8; protected 1 low-scale features
+[ 2026-10-23 09:52:19,305 ] 103 root - INFO - Preprocessed machine-2-1; protected 4 low-scale features
+[ 2026-10-23 09:52:22,525 ] 103 root - INFO - Preprocessed machine-2-2; protected 10 low-scale features
+[ 2026-10-23 09:52:25,505 ] 103 root - INFO - Preprocessed machine-2-3; protected 5 low-scale features
+[ 2026-10-23 09:52:28,294 ] 103 root - INFO - Preprocessed machine-2-4; protected 1 low-scale features
+[ 2026-10-23 09:52:31,180 ] 103 root - INFO - Preprocessed machine-2-5; protected 4 low-scale features
+[ 2026-10-23 09:52:34,527 ] 103 root - INFO - Preprocessed machine-2-6; protected 5 low-scale features
+[ 2026-10-23 09:52:37,759 ] 103 root - INFO - Preprocessed machine-2-7; protected 3 low-scale features
+[ 2026-10-23 09:52:40,656 ] 103 root - INFO - Preprocessed machine-2-8; protected 13 low-scale features
+[ 2026-10-23 09:52:44,305 ] 103 root - INFO - Preprocessed machine-2-9; protected 5 low-scale features
+[ 2026-10-23 09:52:48,225 ] 103 root - INFO - Preprocessed machine-3-1; protected 4 low-scale features
+[ 2026-10-23 09:52:51,022 ] 103 root - INFO - Preprocessed machine-3-10; protected 2 low-scale features
+[ 2026-10-23 09:52:54,230 ] 103 root - INFO - Preprocessed machine-3-11; protected 11 low-scale features
+[ 2026-10-23 09:52:57,015 ] 103 root - INFO - Preprocessed machine-3-2; protected 3 low-scale features
+[ 2026-10-23 09:52:59,928 ] 103 root - INFO - Preprocessed machine-3-3; protected 4 low-scale features
+[ 2026-10-23 09:53:02,820 ] 103 root - INFO - Preprocessed machine-3-4; protected 4 low-scale features
+[ 2026-10-23 09:53:05,414 ] 103 root - INFO - Preprocessed machine-3-5; protected 5 low-scale features
+[ 2026-10-23 09:53:08,765 ] 103 root - INFO - Preprocessed machine-3-6; protected 5 low-scale features
+[ 2026-10-23 09:53:12,397 ] 103 root - INFO - Preprocessed machine-3-7; protected 11 low-scale features
+[ 2026-10-23 09:53:15,546 ] 103 root - INFO - Preprocessed machine-3-8; protected 7 low-scale features
+[ 2026-10-23 09:53:18,869 ] 103 root - INFO - Preprocessed machine-3-9; protected 2 low-scale features
+[ 2026-10-23 09:53:18,869 ] 108 root - INFO - Data preprocessing completed successfully.
+[ 2026-10-23 09:53:18,888 ] 95 root - INFO - Component data_preprocessing recorded with status SUCCESS
+[ 2026-10-23 09:53:18,888 ] 51 root - INFO - Completed pipeline stage: data_preprocessing
+[ 2026-10-23 09:53:18,888 ] 41 root - INFO - Starting pipeline stage: temporal_windowing
+[ 2026-10-23 09:53:21,232 ] 97 root - INFO - Created windows for machine-1-1 | Train: (28420, 60, 38) | Test: (28420, 60, 38)
+[ 2026-10-23 09:53:23,279 ] 97 root - INFO - Created windows for machine-1-2 | Train: (23635, 60, 38) | Test: (23635, 60, 38)
+[ 2026-10-23 09:53:25,351 ] 97 root - INFO - Created windows for machine-1-3 | Train: (23643, 60, 38) | Test: (23644, 60, 38)
+[ 2026-10-23 09:53:27,483 ] 97 root - INFO - Created windows for machine-1-4 | Train: (23647, 60, 38) | Test: (23648, 60, 38)
+[ 2026-10-23 09:53:30,162 ] 97 root - INFO - Created windows for machine-1-5 | Train: (23646, 60, 38) | Test: (23647, 60, 38)
+[ 2026-10-23 09:53:32,813 ] 97 root - INFO - Created windows for machine-1-6 | Train: (23629, 60, 38) | Test: (23630, 60, 38)
+[ 2026-10-23 09:53:35,290 ] 97 root - INFO - Created windows for machine-1-7 | Train: (23638, 60, 38) | Test: (23638, 60, 38)
+[ 2026-10-23 09:53:37,632 ] 97 root - INFO - Created windows for machine-1-8 | Train: (23639, 60, 38) | Test: (23640, 60, 38)
+[ 2026-10-23 09:53:40,256 ] 97 root - INFO - Created windows for machine-2-1 | Train: (23634, 60, 38) | Test: (23635, 60, 38)
+[ 2026-10-23 09:53:42,591 ] 97 root - INFO - Created windows for machine-2-2 | Train: (23640, 60, 38) | Test: (23641, 60, 38)
+[ 2026-10-23 09:53:45,389 ] 97 root - INFO - Created windows for machine-2-3 | Train: (23629, 60, 38) | Test: (23630, 60, 38)
+[ 2026-10-23 09:53:47,763 ] 97 root - INFO - Created windows for machine-2-4 | Train: (23630, 60, 38) | Test: (23630, 60, 38)
+[ 2026-10-23 09:53:50,654 ] 97 root - INFO - Created windows for machine-2-5 | Train: (23629, 60, 38) | Test: (23630, 60, 38)
+[ 2026-10-23 09:53:53,402 ] 97 root - INFO - Created windows for machine-2-6 | Train: (28684, 60, 38) | Test: (28684, 60, 38)
+[ 2026-10-23 09:53:55,978 ] 97 root - INFO - Created windows for machine-2-7 | Train: (23637, 60, 38) | Test: (23637, 60, 38)
+[ 2026-10-23 09:53:58,348 ] 97 root - INFO - Created windows for machine-2-8 | Train: (23643, 60, 38) | Test: (23644, 60, 38)
+[ 2026-10-23 09:54:01,308 ] 97 root - INFO - Created windows for machine-2-9 | Train: (28663, 60, 38) | Test: (28663, 60, 38)
+[ 2026-10-23 09:54:04,788 ] 97 root - INFO - Created windows for machine-3-1 | Train: (28641, 60, 38) | Test: (28641, 60, 38)
+[ 2026-10-23 09:54:07,185 ] 97 root - INFO - Created windows for machine-3-10 | Train: (23633, 60, 38) | Test: (23634, 60, 38)
+[ 2026-10-23 09:54:09,679 ] 97 root - INFO - Created windows for machine-3-11 | Train: (28636, 60, 38) | Test: (28637, 60, 38)
+[ 2026-10-23 09:54:12,037 ] 97 root - INFO - Created windows for machine-3-2 | Train: (23643, 60, 38) | Test: (23644, 60, 38)
+[ 2026-10-23 09:54:14,467 ] 97 root - INFO - Created windows for machine-3-3 | Train: (23644, 60, 38) | Test: (23644, 60, 38)
+[ 2026-10-23 09:54:16,879 ] 97 root - INFO - Created windows for machine-3-4 | Train: (23628, 60, 38) | Test: (23628, 60, 38)
+[ 2026-10-23 09:54:19,081 ] 97 root - INFO - Created windows for machine-3-5 | Train: (23631, 60, 38) | Test: (23632, 60, 38)
+[ 2026-10-23 09:54:21,845 ] 97 root - INFO - Created windows for machine-3-6 | Train: (28667, 60, 38) | Test: (28667, 60, 38)
+[ 2026-10-23 09:54:24,800 ] 97 root - INFO - Created windows for machine-3-7 | Train: (28646, 60, 38) | Test: (28646, 60, 38)
+[ 2026-10-23 09:54:27,777 ] 97 root - INFO - Created windows for machine-3-8 | Train: (28644, 60, 38) | Test: (28645, 60, 38)
+[ 2026-10-23 09:54:30,773 ] 97 root - INFO - Created windows for machine-3-9 | Train: (28654, 60, 38) | Test: (28654, 60, 38)
+[ 2026-10-23 09:54:30,773 ] 103 root - INFO - Temporal windowing completed successfully.
+[ 2026-10-23 09:54:30,912 ] 95 root - INFO - Component temporal_windowing recorded with status SUCCESS
+[ 2026-10-23 09:54:30,912 ] 51 root - INFO - Completed pipeline stage: temporal_windowing
+[ 2026-10-23 09:54:30,912 ] 41 root - INFO - Starting pipeline stage: label_alignment
+[ 2026-10-23 09:54:31,810 ] 110 root - INFO - Labels aligned for machine-1-1 | Windows: 28420 | Anomalous windows: 3166
+[ 2026-10-23 09:54:32,578 ] 110 root - INFO - Labels aligned for machine-1-2 | Windows: 23635 | Anomalous windows: 1132
+[ 2026-10-23 09:54:33,364 ] 110 root - INFO - Labels aligned for machine-1-3 | Windows: 23644 | Anomalous windows: 1525
+[ 2026-10-23 09:54:34,121 ] 110 root - INFO - Labels aligned for machine-1-4 | Windows: 23648 | Anomalous windows: 1428
+[ 2026-10-23 09:54:34,867 ] 110 root - INFO - Labels aligned for machine-1-5 | Windows: 23647 | Anomalous windows: 513
+[ 2026-10-23 09:54:35,640 ] 110 root - INFO - Labels aligned for machine-1-6 | Windows: 23630 | Anomalous windows: 5478
+[ 2026-10-23 09:54:36,393 ] 110 root - INFO - Labels aligned for machine-1-7 | Windows: 23638 | Anomalous windows: 3165
+[ 2026-10-23 09:54:37,153 ] 110 root - INFO - Labels aligned for machine-1-8 | Windows: 23640 | Anomalous windows: 1931
+[ 2026-10-23 09:54:37,878 ] 110 root - INFO - Labels aligned for machine-2-1 | Windows: 23635 | Anomalous windows: 1937
+[ 2026-10-23 09:54:38,649 ] 110 root - INFO - Labels aligned for machine-2-2 | Windows: 23641 | Anomalous windows: 3482
+[ 2026-10-23 09:54:39,370 ] 110 root - INFO - Labels aligned for machine-2-3 | Windows: 23630 | Anomalous windows: 859
+[ 2026-10-23 09:54:40,100 ] 110 root - INFO - Labels aligned for machine-2-4 | Windows: 23630 | Anomalous windows: 2874
+[ 2026-10-23 09:54:40,829 ] 110 root - INFO - Labels aligned for machine-2-5 | Windows: 23630 | Anomalous windows: 2216
+[ 2026-10-23 09:54:41,725 ] 110 root - INFO - Labels aligned for machine-2-6 | Windows: 28684 | Anomalous windows: 841
+[ 2026-10-23 09:54:42,470 ] 110 root - INFO - Labels aligned for machine-2-7 | Windows: 23637 | Anomalous windows: 1597
+[ 2026-10-23 09:54:43,333 ] 110 root - INFO - Labels aligned for machine-2-8 | Windows: 23644 | Anomalous windows: 220
+[ 2026-10-23 09:54:44,203 ] 110 root - INFO - Labels aligned for machine-2-9 | Windows: 28663 | Anomalous windows: 2345
+[ 2026-10-23 09:54:45,124 ] 110 root - INFO - Labels aligned for machine-3-1 | Windows: 28641 | Anomalous windows: 544
+[ 2026-10-23 09:54:45,817 ] 110 root - INFO - Labels aligned for machine-3-10 | Windows: 23634 | Anomalous windows: 1814
+[ 2026-10-23 09:54:46,721 ] 110 root - INFO - Labels aligned for machine-3-11 | Windows: 28637 | Anomalous windows: 360
+[ 2026-10-23 09:54:47,440 ] 110 root - INFO - Labels aligned for machine-3-2 | Windows: 23644 | Anomalous windows: 1695
+[ 2026-10-23 09:54:48,210 ] 110 root - INFO - Labels aligned for machine-3-3 | Windows: 23644 | Anomalous windows: 2166
+[ 2026-10-23 09:54:48,937 ] 110 root - INFO - Labels aligned for machine-3-4 | Windows: 23628 | Anomalous windows: 1449
+[ 2026-10-23 09:54:49,693 ] 110 root - INFO - Labels aligned for machine-3-5 | Windows: 23632 | Anomalous windows: 1075
+[ 2026-10-23 09:54:50,571 ] 110 root - INFO - Labels aligned for machine-3-6 | Windows: 28667 | Anomalous windows: 1843
+[ 2026-10-23 09:54:51,522 ] 110 root - INFO - Labels aligned for machine-3-7 | Windows: 28646 | Anomalous windows: 729
+[ 2026-10-23 09:54:52,421 ] 110 root - INFO - Labels aligned for machine-3-8 | Windows: 28645 | Anomalous windows: 1725
+[ 2026-10-23 09:54:53,344 ] 110 root - INFO - Labels aligned for machine-3-9 | Windows: 28654 | Anomalous windows: 539
+[ 2026-10-23 09:54:53,344 ] 117 root - INFO - Label alignment completed successfully.
+[ 2026-10-23 09:54:53,421 ] 95 root - INFO - Component label_alignment recorded with status SUCCESS
+[ 2026-10-23 09:54:53,422 ] 51 root - INFO - Completed pipeline stage: label_alignment
+[ 2026-10-23 09:54:53,422 ] 41 root - INFO - Starting pipeline stage: feature_engineering
+[ 2026-10-23 09:54:58,778 ] 89 root - INFO - Features created for machine-1-1 | Train: (28420, 228) | Test: (28420, 228)
+[ 2026-10-23 09:55:02,837 ] 89 root - INFO - Features created for machine-1-2 | Train: (23635, 228) | Test: (23635, 228)
+[ 2026-10-23 09:55:07,194 ] 89 root - INFO - Features created for machine-1-3 | Train: (23643, 228) | Test: (23644, 228)
+[ 2026-10-23 09:55:11,476 ] 89 root - INFO - Features created for machine-1-4 | Train: (23647, 228) | Test: (23648, 228)
+[ 2026-10-23 09:55:15,594 ] 89 root - INFO - Features created for machine-1-5 | Train: (23646, 228) | Test: (23647, 228)
+[ 2026-10-23 09:55:19,732 ] 89 root - INFO - Features created for machine-1-6 | Train: (23629, 228) | Test: (23630, 228)
+[ 2026-10-23 09:55:24,078 ] 89 root - INFO - Features created for machine-1-7 | Train: (23638, 228) | Test: (23638, 228)
+[ 2026-10-23 09:55:28,279 ] 89 root - INFO - Features created for machine-1-8 | Train: (23639, 228) | Test: (23640, 228)
+[ 2026-10-23 09:55:32,780 ] 89 root - INFO - Features created for machine-2-1 | Train: (23634, 228) | Test: (23635, 228)
+[ 2026-10-23 09:55:36,803 ] 89 root - INFO - Features created for machine-2-2 | Train: (23640, 228) | Test: (23641, 228)
+[ 2026-10-23 09:55:41,137 ] 89 root - INFO - Features created for machine-2-3 | Train: (23629, 228) | Test: (23630, 228)
+[ 2026-10-23 09:55:45,260 ] 89 root - INFO - Features created for machine-2-4 | Train: (23630, 228) | Test: (23630, 228)
+[ 2026-10-23 09:55:49,378 ] 89 root - INFO - Features created for machine-2-5 | Train: (23629, 228) | Test: (23630, 228)
+[ 2026-10-23 09:55:54,468 ] 89 root - INFO - Features created for machine-2-6 | Train: (28684, 228) | Test: (28684, 228)
+[ 2026-10-23 09:55:58,629 ] 89 root - INFO - Features created for machine-2-7 | Train: (23637, 228) | Test: (23637, 228)
+[ 2026-10-23 09:56:03,187 ] 89 root - INFO - Features created for machine-2-8 | Train: (23643, 228) | Test: (23644, 228)
+[ 2026-10-23 09:56:08,075 ] 89 root - INFO - Features created for machine-2-9 | Train: (28663, 228) | Test: (28663, 228)
+[ 2026-10-23 09:56:13,084 ] 89 root - INFO - Features created for machine-3-1 | Train: (28641, 228) | Test: (28641, 228)
+[ 2026-10-23 09:56:17,404 ] 89 root - INFO - Features created for machine-3-10 | Train: (23633, 228) | Test: (23634, 228)
+[ 2026-10-23 09:56:22,351 ] 89 root - INFO - Features created for machine-3-11 | Train: (28636, 228) | Test: (28637, 228)
+[ 2026-10-23 09:56:26,528 ] 89 root - INFO - Features created for machine-3-2 | Train: (23643, 228) | Test: (23644, 228)
+[ 2026-10-23 09:56:30,789 ] 89 root - INFO - Features created for machine-3-3 | Train: (23644, 228) | Test: (23644, 228)
+[ 2026-10-23 09:56:35,003 ] 89 root - INFO - Features created for machine-3-4 | Train: (23628, 228) | Test: (23628, 228)
+[ 2026-10-23 09:56:39,105 ] 89 root - INFO - Features created for machine-3-5 | Train: (23631, 228) | Test: (23632, 228)
+[ 2026-10-23 09:56:44,115 ] 89 root - INFO - Features created for machine-3-6 | Train: (28667, 228) | Test: (28667, 228)
+[ 2026-10-23 09:56:49,200 ] 89 root - INFO - Features created for machine-3-7 | Train: (28646, 228) | Test: (28646, 228)
+[ 2026-10-23 09:56:54,439 ] 89 root - INFO - Features created for machine-3-8 | Train: (28644, 228) | Test: (28645, 228)
+[ 2026-10-23 09:56:59,470 ] 89 root - INFO - Features created for machine-3-9 | Train: (28654, 228) | Test: (28654, 228)
+[ 2026-10-23 09:56:59,471 ] 95 root - INFO - Feature engineering completed successfully.
+[ 2026-10-23 09:56:59,572 ] 95 root - INFO - Component feature_engineering recorded with status SUCCESS
+[ 2026-10-23 09:56:59,572 ] 51 root - INFO - Completed pipeline stage: feature_engineering
+[ 2026-10-23 09:56:59,572 ] 41 root - INFO - Starting pipeline stage: baseline_detection
+[ 2026-10-23 09:57:01,679 ] 87 root - INFO - Baseline detection completed for machine-1-1 | Test anomalies: 4020
+[ 2026-10-23 09:57:03,329 ] 87 root - INFO - Baseline detection completed for machine-1-2 | Test anomalies: 482
+[ 2026-10-23 09:57:05,159 ] 87 root - INFO - Baseline detection completed for machine-1-3 | Test anomalies: 451
+[ 2026-10-23 09:57:06,894 ] 87 root - INFO - Baseline detection completed for machine-1-4 | Test anomalies: 630
+[ 2026-10-23 09:57:08,686 ] 87 root - INFO - Baseline detection completed for machine-1-5 | Test anomalies: 1095
+[ 2026-10-23 09:57:10,371 ] 87 root - INFO - Baseline detection completed for machine-1-6 | Test anomalies: 16751
+[ 2026-10-23 09:57:12,155 ] 87 root - INFO - Baseline detection completed for machine-1-7 | Test anomalies: 210
+[ 2026-10-23 09:57:13,850 ] 87 root - INFO - Baseline detection completed for machine-1-8 | Test anomalies: 1150
+[ 2026-10-23 09:57:15,474 ] 87 root - INFO - Baseline detection completed for machine-2-1 | Test anomalies: 773
+[ 2026-10-23 09:57:17,147 ] 87 root - INFO - Baseline detection completed for machine-2-2 | Test anomalies: 2032
+[ 2026-10-23 09:57:18,994 ] 87 root - INFO - Baseline detection completed for machine-2-3 | Test anomalies: 506
+[ 2026-10-23 09:57:20,640 ] 87 root - INFO - Baseline detection completed for machine-2-4 | Test anomalies: 355
+[ 2026-10-23 09:57:22,302 ] 87 root - INFO - Baseline detection completed for machine-2-5 | Test anomalies: 609
+[ 2026-10-23 09:57:24,391 ] 87 root - INFO - Baseline detection completed for machine-2-6 | Test anomalies: 2781
+[ 2026-10-23 09:57:26,093 ] 87 root - INFO - Baseline detection completed for machine-2-7 | Test anomalies: 672
+[ 2026-10-23 09:57:27,727 ] 87 root - INFO - Baseline detection completed for machine-2-8 | Test anomalies: 2385
+[ 2026-10-23 09:57:29,713 ] 87 root - INFO - Baseline detection completed for machine-2-9 | Test anomalies: 2705
+[ 2026-10-23 09:57:31,831 ] 87 root - INFO - Baseline detection completed for machine-3-1 | Test anomalies: 17360
+[ 2026-10-23 09:57:33,603 ] 87 root - INFO - Baseline detection completed for machine-3-10 | Test anomalies: 942
+[ 2026-10-23 09:57:35,727 ] 87 root - INFO - Baseline detection completed for machine-3-11 | Test anomalies: 6060
+[ 2026-10-23 09:57:37,428 ] 87 root - INFO - Baseline detection completed for machine-3-2 | Test anomalies: 1
+[ 2026-10-23 09:57:39,243 ] 87 root - INFO - Baseline detection completed for machine-3-3 | Test anomalies: 258
+[ 2026-10-23 09:57:41,010 ] 87 root - INFO - Baseline detection completed for machine-3-4 | Test anomalies: 850
+[ 2026-10-23 09:57:42,658 ] 87 root - INFO - Baseline detection completed for machine-3-5 | Test anomalies: 9071
+[ 2026-10-23 09:57:44,722 ] 87 root - INFO - Baseline detection completed for machine-3-6 | Test anomalies: 4019
+[ 2026-10-23 09:57:46,660 ] 87 root - INFO - Baseline detection completed for machine-3-7 | Test anomalies: 137
+[ 2026-10-23 09:57:48,745 ] 87 root - INFO - Baseline detection completed for machine-3-8 | Test anomalies: 3432
+[ 2026-10-23 09:57:50,628 ] 87 root - INFO - Baseline detection completed for machine-3-9 | Test anomalies: 20205
+[ 2026-10-23 09:57:50,628 ] 92 root - INFO - Baseline anomaly detection completed successfully.
+[ 2026-10-23 09:57:50,665 ] 95 root - INFO - Component baseline_detection recorded with status SUCCESS
+[ 2026-10-23 09:57:50,665 ] 51 root - INFO - Completed pipeline stage: baseline_detection
+[ 2026-10-23 09:57:50,667 ] 41 root - INFO - Starting pipeline stage: anomaly_detection
+[ 2026-10-23 09:58:14,389 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.279194 | Validation Loss: 0.170895
+[ 2026-10-23 09:58:32,522 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.157945 | Validation Loss: 0.146221
+[ 2026-10-23 09:58:50,137 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.129136 | Validation Loss: 0.132898
+[ 2026-10-23 09:59:08,130 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.120612 | Validation Loss: 0.129986
+[ 2026-10-23 09:59:26,054 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.116681 | Validation Loss: 0.127691
+[ 2026-10-23 09:59:42,058 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.114301 | Validation Loss: 0.125946
+[ 2026-10-23 09:59:56,785 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.110788 | Validation Loss: 0.124665
+[ 2026-10-23 10:00:11,589 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.108233 | Validation Loss: 0.124580
+[ 2026-10-23 10:00:26,769 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.106355 | Validation Loss: 0.121276
+[ 2026-10-23 10:00:41,451 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.103384 | Validation Loss: 0.119800
+[ 2026-10-23 10:00:56,029 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.104457 | Validation Loss: 0.118881
+[ 2026-10-23 10:01:10,316 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.101361 | Validation Loss: 0.119235
+[ 2026-10-23 10:01:25,367 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.101996 | Validation Loss: 0.117829
+[ 2026-10-23 10:01:39,727 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.099392 | Validation Loss: 0.117581
+[ 2026-10-23 10:01:54,170 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.099987 | Validation Loss: 0.116756
+[ 2026-10-23 10:02:08,811 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.098636 | Validation Loss: 0.116641
+[ 2026-10-23 10:02:26,151 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.097807 | Validation Loss: 0.116677
+[ 2026-10-23 10:02:44,831 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.097168 | Validation Loss: 0.116429
+[ 2026-10-23 10:03:01,949 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.097744 | Validation Loss: 0.116852
+[ 2026-10-23 10:03:18,385 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.097198 | Validation Loss: 0.116444
+[ 2026-10-23 10:03:27,494 ] 253 root - INFO - GRU Autoencoder completed for machine-1-1 | Test windows: 28420
+[ 2026-10-23 10:03:40,933 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.718507 | Validation Loss: 0.848004
+[ 2026-10-23 10:03:54,445 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.650699 | Validation Loss: 0.798550
+[ 2026-10-23 10:04:07,956 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.631226 | Validation Loss: 0.759685
+[ 2026-10-23 10:04:20,161 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.621363 | Validation Loss: 0.741524
+[ 2026-10-23 10:04:34,045 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.615688 | Validation Loss: 0.735592
+[ 2026-10-23 10:04:50,740 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.608041 | Validation Loss: 0.724381
+[ 2026-10-23 10:05:07,012 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.599767 | Validation Loss: 0.722133
+[ 2026-10-23 10:05:23,461 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.594064 | Validation Loss: 0.726294
+[ 2026-10-23 10:05:39,267 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.587232 | Validation Loss: 0.726672
+[ 2026-10-23 10:05:55,301 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.581684 | Validation Loss: 0.712238
+[ 2026-10-23 10:06:11,574 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.578948 | Validation Loss: 0.718021
+[ 2026-10-23 10:06:27,897 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.573322 | Validation Loss: 0.732341
+[ 2026-10-23 10:06:44,991 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.571814 | Validation Loss: 0.728473
+[ 2026-10-23 10:07:02,094 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.567625 | Validation Loss: 0.743773
+[ 2026-10-23 10:07:22,725 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.566220 | Validation Loss: 0.744204
+[ 2026-10-23 10:07:22,725 ] 161 root - INFO - Early stopping triggered.
+[ 2026-10-23 10:07:32,853 ] 253 root - INFO - GRU Autoencoder completed for machine-1-2 | Test windows: 23635
+[ 2026-10-23 10:07:49,677 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.441534 | Validation Loss: 1.174190
+[ 2026-10-23 10:08:01,858 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.318466 | Validation Loss: 1.338091
+[ 2026-10-23 10:08:15,676 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.280008 | Validation Loss: 1.753485
+[ 2026-10-23 10:08:28,332 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.267211 | Validation Loss: 2.125097
+[ 2026-10-23 10:08:40,988 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.257609 | Validation Loss: 2.130904
+[ 2026-10-23 10:08:53,171 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.259222 | Validation Loss: 2.155021
+[ 2026-10-23 10:08:53,171 ] 161 root - INFO - Early stopping triggered.
+[ 2026-10-23 10:09:00,621 ] 253 root - INFO - GRU Autoencoder completed for machine-1-3 | Test windows: 23644
+[ 2026-10-23 10:09:13,748 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.430282 | Validation Loss: 1.118337
+[ 2026-10-23 10:09:26,179 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.321167 | Validation Loss: 0.908068
+[ 2026-10-23 10:09:38,103 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.287551 | Validation Loss: 0.847115
+[ 2026-10-23 10:09:49,975 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.276104 | Validation Loss: 0.809020
+[ 2026-10-23 10:10:02,005 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.270533 | Validation Loss: 0.776602
+[ 2026-10-23 10:10:14,989 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.264855 | Validation Loss: 0.809362
+[ 2026-10-23 10:10:27,549 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.263384 | Validation Loss: 0.853579
+[ 2026-10-23 10:10:39,702 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.262146 | Validation Loss: 0.883136
+[ 2026-10-23 10:10:51,862 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.258593 | Validation Loss: 1.033452
+[ 2026-10-23 10:11:03,854 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.259022 | Validation Loss: 0.959934
+[ 2026-10-23 10:11:03,854 ] 161 root - INFO - Early stopping triggered.
+[ 2026-10-23 10:11:11,298 ] 253 root - INFO - GRU Autoencoder completed for machine-1-4 | Test windows: 23648
+[ 2026-10-23 10:11:24,287 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.419931 | Validation Loss: 0.483258
+[ 2026-10-23 10:11:35,373 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.341586 | Validation Loss: 0.457317
+[ 2026-10-23 10:11:51,246 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.330381 | Validation Loss: 0.449156
+[ 2026-10-23 10:12:12,111 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.320509 | Validation Loss: 0.439705
+[ 2026-10-23 10:12:31,152 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.312267 | Validation Loss: 0.435447
+[ 2026-10-23 10:12:47,822 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.310018 | Validation Loss: 0.434628
+[ 2026-10-23 10:13:03,706 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.308697 | Validation Loss: 0.433763
+[ 2026-10-23 10:13:21,297 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.308120 | Validation Loss: 0.433094
+[ 2026-10-23 10:13:35,881 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.307493 | Validation Loss: 0.432451
+[ 2026-10-23 10:13:51,444 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.306677 | Validation Loss: 0.431781
+[ 2026-10-23 10:14:08,317 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.306250 | Validation Loss: 0.431716
+[ 2026-10-23 10:14:27,872 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.305705 | Validation Loss: 0.431522
+[ 2026-10-23 10:14:47,168 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.305435 | Validation Loss: 0.431389
+[ 2026-10-23 10:14:59,392 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.305136 | Validation Loss: 0.431097
+[ 2026-10-23 10:15:12,444 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.304708 | Validation Loss: 0.430446
+[ 2026-10-23 10:15:25,257 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.304457 | Validation Loss: 0.430440
+[ 2026-10-23 10:15:37,092 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.304488 | Validation Loss: 0.430746
+[ 2026-10-23 10:15:49,805 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.303974 | Validation Loss: 0.430184
+[ 2026-10-23 10:16:03,546 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.303778 | Validation Loss: 0.430536
+[ 2026-10-23 10:16:16,068 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.303768 | Validation Loss: 0.429742
+[ 2026-10-23 10:16:24,164 ] 253 root - INFO - GRU Autoencoder completed for machine-1-5 | Test windows: 23647
+[ 2026-10-23 10:16:37,194 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.515753 | Validation Loss: 0.449747
+[ 2026-10-23 10:16:49,061 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.383349 | Validation Loss: 0.413374
+[ 2026-10-23 10:17:01,562 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.349522 | Validation Loss: 0.380243
+[ 2026-10-23 10:17:14,864 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.332997 | Validation Loss: 0.358103
+[ 2026-10-23 10:17:27,267 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.324260 | Validation Loss: 0.353097
+[ 2026-10-23 10:17:46,875 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.320234 | Validation Loss: 0.349077
+[ 2026-10-23 10:18:00,441 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.316859 | Validation Loss: 0.346048
+[ 2026-10-23 10:18:15,850 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.313370 | Validation Loss: 0.349153
+[ 2026-10-23 10:18:31,357 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.310219 | Validation Loss: 0.347436
+[ 2026-10-23 10:18:46,058 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.306479 | Validation Loss: 0.346808
+[ 2026-10-23 10:19:03,422 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.304842 | Validation Loss: 0.344454
+[ 2026-10-23 10:19:22,518 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.303543 | Validation Loss: 0.343776
+[ 2026-10-23 10:19:43,835 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.293068 | Validation Loss: 0.341786
+[ 2026-10-23 10:20:00,371 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.292093 | Validation Loss: 0.344152
+[ 2026-10-23 10:20:18,398 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.287681 | Validation Loss: 0.340468
+[ 2026-10-23 10:20:33,779 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.291752 | Validation Loss: 0.341458
+[ 2026-10-23 10:20:48,727 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.283065 | Validation Loss: 0.338258
+[ 2026-10-23 10:21:04,233 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.276678 | Validation Loss: 0.336244
+[ 2026-10-23 10:21:19,621 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.271515 | Validation Loss: 0.333808
+[ 2026-10-23 10:21:34,782 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.272602 | Validation Loss: 0.337696
+[ 2026-10-23 10:21:44,308 ] 253 root - INFO - GRU Autoencoder completed for machine-1-6 | Test windows: 23630
+[ 2026-10-23 10:21:58,737 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.533289 | Validation Loss: 0.430826
+[ 2026-10-23 10:22:12,038 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.399198 | Validation Loss: 0.400265
+[ 2026-10-23 10:22:24,833 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.360271 | Validation Loss: 0.382762
+[ 2026-10-23 10:22:37,877 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.343628 | Validation Loss: 0.376195
+[ 2026-10-23 10:22:51,041 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.331800 | Validation Loss: 0.373363
+[ 2026-10-23 10:23:03,981 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.326504 | Validation Loss: 0.369890
+[ 2026-10-23 10:23:17,233 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.322171 | Validation Loss: 0.368559
+[ 2026-10-23 10:23:29,862 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.317771 | Validation Loss: 0.367952
+[ 2026-10-23 10:23:42,913 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.310516 | Validation Loss: 0.366396
+[ 2026-10-23 10:23:56,209 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.315405 | Validation Loss: 0.365070
+[ 2026-10-23 10:24:09,982 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.306211 | Validation Loss: 0.361591
+[ 2026-10-23 10:24:23,692 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.297841 | Validation Loss: 0.362035
+[ 2026-10-23 10:24:36,998 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.299986 | Validation Loss: 0.365536
+[ 2026-10-23 10:24:50,751 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.304776 | Validation Loss: 0.356633
+[ 2026-10-23 10:25:04,003 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.296050 | Validation Loss: 0.356550
+[ 2026-10-23 10:25:17,305 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.290162 | Validation Loss: 0.356060
+[ 2026-10-23 10:25:31,125 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.287119 | Validation Loss: 0.352530
+[ 2026-10-23 10:25:44,401 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.287598 | Validation Loss: 0.352374
+[ 2026-10-23 10:25:57,827 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.281047 | Validation Loss: 0.351914
+[ 2026-10-23 10:26:11,174 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.282753 | Validation Loss: 0.350359
+[ 2026-10-23 10:26:19,873 ] 253 root - INFO - GRU Autoencoder completed for machine-1-7 | Test windows: 23638
+[ 2026-10-23 10:26:34,723 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.472826 | Validation Loss: 0.359240
+[ 2026-10-23 10:26:48,123 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.349772 | Validation Loss: 0.285032
+[ 2026-10-23 10:27:01,307 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.318928 | Validation Loss: 0.236402
+[ 2026-10-23 10:27:18,510 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.299035 | Validation Loss: 0.237540
+[ 2026-10-23 10:27:33,287 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.290570 | Validation Loss: 0.234674
+[ 2026-10-23 10:27:48,743 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.285095 | Validation Loss: 0.238251
+[ 2026-10-23 10:28:04,293 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.280547 | Validation Loss: 0.238027
+[ 2026-10-23 10:28:20,558 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.276825 | Validation Loss: 0.237260
+[ 2026-10-23 10:28:33,649 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.275050 | Validation Loss: 0.235894
+[ 2026-10-23 10:28:47,087 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.272667 | Validation Loss: 0.235090
+[ 2026-10-23 10:28:47,087 ] 161 root - INFO - Early stopping triggered.
+[ 2026-10-23 10:28:55,829 ] 253 root - INFO - GRU Autoencoder completed for machine-1-8 | Test windows: 23640
+[ 2026-10-23 10:29:10,807 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.558961 | Validation Loss: 0.656269
+[ 2026-10-23 10:29:25,039 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.468186 | Validation Loss: 0.611331
+[ 2026-10-23 10:29:38,119 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.451731 | Validation Loss: 0.603307
+[ 2026-10-23 10:29:51,517 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.447903 | Validation Loss: 0.596813
+[ 2026-10-23 10:30:04,475 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.445934 | Validation Loss: 0.594473
+[ 2026-10-23 10:30:17,598 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.444142 | Validation Loss: 0.590194
+[ 2026-10-23 10:30:30,931 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.442640 | Validation Loss: 0.586731
+[ 2026-10-23 10:30:45,845 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.441485 | Validation Loss: 0.587277
+[ 2026-10-23 10:30:58,951 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.440140 | Validation Loss: 0.586461
+[ 2026-10-23 10:31:14,916 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.439225 | Validation Loss: 0.581765
+[ 2026-10-23 10:31:34,186 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.438024 | Validation Loss: 0.579977
+[ 2026-10-23 10:31:50,464 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.433470 | Validation Loss: 0.571112
+[ 2026-10-23 10:32:01,907 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.430199 | Validation Loss: 0.565517
+[ 2026-10-23 10:32:13,226 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.429017 | Validation Loss: 0.562879
+[ 2026-10-23 10:32:24,539 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.428197 | Validation Loss: 0.560208
+[ 2026-10-23 10:32:35,962 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.427592 | Validation Loss: 0.560235
+[ 2026-10-23 10:32:47,736 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.426938 | Validation Loss: 0.560694
+[ 2026-10-23 10:32:58,953 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.425498 | Validation Loss: 0.561846
+[ 2026-10-23 10:33:11,828 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.423801 | Validation Loss: 0.559656
+[ 2026-10-23 10:33:23,263 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.421557 | Validation Loss: 0.563615
+[ 2026-10-23 10:33:30,582 ] 253 root - INFO - GRU Autoencoder completed for machine-2-1 | Test windows: 23635
+[ 2026-10-23 10:33:43,047 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.455124 | Validation Loss: 0.493375
+[ 2026-10-23 10:33:54,026 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.401547 | Validation Loss: 0.486633
+[ 2026-10-23 10:34:09,267 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.392876 | Validation Loss: 0.481328
+[ 2026-10-23 10:34:20,856 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.389145 | Validation Loss: 0.478427
+[ 2026-10-23 10:34:32,046 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.383973 | Validation Loss: 0.474214
+[ 2026-10-23 10:34:42,995 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.379453 | Validation Loss: 0.472638
+[ 2026-10-23 10:34:54,127 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.377607 | Validation Loss: 0.472066
+[ 2026-10-23 10:35:05,319 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.376673 | Validation Loss: 0.472152
+[ 2026-10-23 10:35:18,646 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.376545 | Validation Loss: 0.470628
+[ 2026-10-23 10:35:35,628 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.375540 | Validation Loss: 0.470564
+[ 2026-10-23 10:35:47,011 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.374861 | Validation Loss: 0.470225
+[ 2026-10-23 10:36:02,101 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.374741 | Validation Loss: 0.469880
+[ 2026-10-23 10:36:14,246 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.374064 | Validation Loss: 0.469402
+[ 2026-10-23 10:36:25,711 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.374000 | Validation Loss: 0.469115
+[ 2026-10-23 10:36:37,625 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.373498 | Validation Loss: 0.469016
+[ 2026-10-23 10:36:50,291 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.373451 | Validation Loss: 0.472394
+[ 2026-10-23 10:37:01,814 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.373411 | Validation Loss: 0.468612
+[ 2026-10-23 10:37:13,694 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.372744 | Validation Loss: 0.468735
+[ 2026-10-23 10:37:28,860 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.372349 | Validation Loss: 0.468599
+[ 2026-10-23 10:37:42,532 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.372234 | Validation Loss: 0.468582
+[ 2026-10-23 10:37:50,109 ] 253 root - INFO - GRU Autoencoder completed for machine-2-2 | Test windows: 23641
+[ 2026-10-23 10:38:04,432 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.594732 | Validation Loss: 0.180510
+[ 2026-10-23 10:38:16,332 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.500435 | Validation Loss: 0.160672
+[ 2026-10-23 10:38:29,116 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.454478 | Validation Loss: 0.148909
+[ 2026-10-23 10:38:40,650 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.433185 | Validation Loss: 0.148103
+[ 2026-10-23 10:38:52,331 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.419383 | Validation Loss: 0.147031
+[ 2026-10-23 10:39:03,652 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.404426 | Validation Loss: 0.141735
+[ 2026-10-23 10:39:15,272 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.386627 | Validation Loss: 0.130987
+[ 2026-10-23 10:39:27,091 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.378122 | Validation Loss: 0.123503
+[ 2026-10-23 10:39:38,521 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.356728 | Validation Loss: 0.132977
+[ 2026-10-23 10:39:51,650 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.343179 | Validation Loss: 0.129719
+[ 2026-10-23 10:40:03,500 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.349827 | Validation Loss: 0.125851
+[ 2026-10-23 10:40:14,864 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.359128 | Validation Loss: 0.123490
+[ 2026-10-23 10:40:28,833 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.352372 | Validation Loss: 0.119719
+[ 2026-10-23 10:40:43,444 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.326354 | Validation Loss: 0.122574
+[ 2026-10-23 10:40:57,521 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.321748 | Validation Loss: 0.123333
+[ 2026-10-23 10:41:09,321 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.319219 | Validation Loss: 0.135891
+[ 2026-10-23 10:41:21,519 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.392272 | Validation Loss: 0.123130
+[ 2026-10-23 10:41:33,179 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.339246 | Validation Loss: 0.130873
+[ 2026-10-23 10:41:33,179 ] 161 root - INFO - Early stopping triggered.
+[ 2026-10-23 10:41:40,731 ] 253 root - INFO - GRU Autoencoder completed for machine-2-3 | Test windows: 23630
+[ 2026-10-23 10:41:54,059 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.472448 | Validation Loss: 0.322533
+[ 2026-10-23 10:42:05,597 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.366723 | Validation Loss: 0.259325
+[ 2026-10-23 10:42:20,190 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.341557 | Validation Loss: 0.237786
+[ 2026-10-23 10:42:34,863 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.323485 | Validation Loss: 0.232279
+[ 2026-10-23 10:42:46,702 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.310202 | Validation Loss: 0.222406
+[ 2026-10-23 10:43:00,765 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.301856 | Validation Loss: 0.216813
+[ 2026-10-23 10:43:18,367 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.296702 | Validation Loss: 0.215012
+[ 2026-10-23 10:43:30,426 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.292924 | Validation Loss: 0.208765
+[ 2026-10-23 10:43:42,314 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.290068 | Validation Loss: 0.211280
+[ 2026-10-23 10:43:55,676 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.294808 | Validation Loss: 0.206806
+[ 2026-10-23 10:44:10,978 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.288479 | Validation Loss: 0.206366
+[ 2026-10-23 10:44:22,543 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.285544 | Validation Loss: 0.204371
+[ 2026-10-23 10:44:33,815 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.286070 | Validation Loss: 0.203349
+[ 2026-10-23 10:44:45,274 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.283194 | Validation Loss: 0.206646
+[ 2026-10-23 10:44:57,228 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.281660 | Validation Loss: 0.205110
+[ 2026-10-23 10:45:17,080 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.281620 | Validation Loss: 0.205144
+[ 2026-10-23 10:45:29,253 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.280137 | Validation Loss: 0.204674
+[ 2026-10-23 10:45:40,776 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.280858 | Validation Loss: 0.202074
+[ 2026-10-23 10:45:54,059 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.277128 | Validation Loss: 0.205475
+[ 2026-10-23 10:46:06,454 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.278250 | Validation Loss: 0.206331
+[ 2026-10-23 10:46:15,254 ] 253 root - INFO - GRU Autoencoder completed for machine-2-4 | Test windows: 23630
+[ 2026-10-23 10:46:28,122 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.465100 | Validation Loss: 0.627240
+[ 2026-10-23 10:46:42,195 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.339698 | Validation Loss: 0.584212
+[ 2026-10-23 10:46:55,275 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.302286 | Validation Loss: 0.544284
+[ 2026-10-23 10:47:07,228 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.283565 | Validation Loss: 0.528975
+[ 2026-10-23 10:47:25,197 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.276461 | Validation Loss: 0.517738
+[ 2026-10-23 10:47:41,061 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.270004 | Validation Loss: 0.499733
+[ 2026-10-23 10:47:55,461 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.266413 | Validation Loss: 0.490659
+[ 2026-10-23 10:48:09,333 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.263634 | Validation Loss: 0.486806
+[ 2026-10-23 10:48:23,413 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.260973 | Validation Loss: 0.480951
+[ 2026-10-23 10:48:37,099 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.259917 | Validation Loss: 0.478658
+[ 2026-10-23 10:48:51,128 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.257679 | Validation Loss: 0.477879
+[ 2026-10-23 10:49:05,896 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.255891 | Validation Loss: 0.477925
+[ 2026-10-23 10:49:20,819 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.254516 | Validation Loss: 0.477870
+[ 2026-10-23 10:49:34,754 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.252853 | Validation Loss: 0.480527
+[ 2026-10-23 10:49:49,348 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.255117 | Validation Loss: 0.481255
+[ 2026-10-23 10:50:03,066 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.252339 | Validation Loss: 0.491982
+[ 2026-10-23 10:50:17,013 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.250378 | Validation Loss: 0.503824
+[ 2026-10-23 10:50:30,736 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.249593 | Validation Loss: 0.491501
+[ 2026-10-23 10:50:30,736 ] 161 root - INFO - Early stopping triggered.
+[ 2026-10-23 10:50:39,831 ] 253 root - INFO - GRU Autoencoder completed for machine-2-5 | Test windows: 23630
+[ 2026-10-23 10:50:58,899 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.331834 | Validation Loss: 0.283170
+[ 2026-10-23 10:51:16,148 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.253708 | Validation Loss: 0.255493
+[ 2026-10-23 10:51:32,908 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.241625 | Validation Loss: 0.249132
+[ 2026-10-23 10:51:49,933 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.235242 | Validation Loss: 0.236648
+[ 2026-10-23 10:52:07,012 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.222862 | Validation Loss: 0.225731
+[ 2026-10-23 10:52:23,884 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.213061 | Validation Loss: 0.220337
+[ 2026-10-23 10:52:40,530 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.210382 | Validation Loss: 0.218746
+[ 2026-10-23 10:52:57,151 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.208600 | Validation Loss: 0.215833
+[ 2026-10-23 10:53:13,745 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.207047 | Validation Loss: 0.214383
+[ 2026-10-23 10:53:30,516 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.206555 | Validation Loss: 0.215048
+[ 2026-10-23 10:53:46,646 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.205438 | Validation Loss: 0.213676
+[ 2026-10-23 10:54:03,441 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.204999 | Validation Loss: 0.214726
+[ 2026-10-23 10:54:20,348 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.205521 | Validation Loss: 0.213765
+[ 2026-10-23 10:54:37,654 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.204601 | Validation Loss: 0.212666
+[ 2026-10-23 10:54:55,547 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.204390 | Validation Loss: 0.211494
+[ 2026-10-23 10:55:12,427 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.202809 | Validation Loss: 0.210633
+[ 2026-10-23 10:55:28,854 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.202813 | Validation Loss: 0.210247
+[ 2026-10-23 10:55:45,856 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.202039 | Validation Loss: 0.212884
+[ 2026-10-23 10:56:02,792 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.202816 | Validation Loss: 0.211451
+[ 2026-10-23 10:56:19,601 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.201809 | Validation Loss: 0.210507
+[ 2026-10-23 10:56:30,326 ] 253 root - INFO - GRU Autoencoder completed for machine-2-6 | Test windows: 28684
+[ 2026-10-23 10:56:45,954 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.428522 | Validation Loss: 0.711303
+[ 2026-10-23 10:56:58,675 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.301935 | Validation Loss: 0.570835
+[ 2026-10-23 10:57:12,902 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.263205 | Validation Loss: 0.552986
+[ 2026-10-23 10:57:26,471 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.247294 | Validation Loss: 0.544782
+[ 2026-10-23 10:57:42,105 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.240134 | Validation Loss: 0.537735
+[ 2026-10-23 10:57:58,768 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.235709 | Validation Loss: 0.523125
+[ 2026-10-23 10:58:12,932 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.232416 | Validation Loss: 0.520468
+[ 2026-10-23 10:58:25,860 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.230269 | Validation Loss: 0.523797
+[ 2026-10-23 10:58:38,824 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.229271 | Validation Loss: 0.516628
+[ 2026-10-23 10:58:51,677 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.227035 | Validation Loss: 0.516588
+[ 2026-10-23 10:59:04,315 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.225795 | Validation Loss: 0.512988
+[ 2026-10-23 10:59:16,906 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.224894 | Validation Loss: 0.516986
+[ 2026-10-23 10:59:29,560 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.223160 | Validation Loss: 0.513476
+[ 2026-10-23 10:59:42,585 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.222107 | Validation Loss: 0.519184
+[ 2026-10-23 10:59:55,196 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.220856 | Validation Loss: 0.528052
+[ 2026-10-23 11:00:23,971 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.222554 | Validation Loss: 0.537467
+[ 2026-10-23 11:00:23,971 ] 161 root - INFO - Early stopping triggered.
+[ 2026-10-23 11:00:41,944 ] 253 root - INFO - GRU Autoencoder completed for machine-2-7 | Test windows: 23637
+[ 2026-10-23 11:01:16,278 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.181001 | Validation Loss: 0.250780
+[ 2026-10-23 11:01:48,044 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.075829 | Validation Loss: 0.183751
+[ 2026-10-23 11:02:19,823 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.059863 | Validation Loss: 0.159027
+[ 2026-10-23 11:02:51,714 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.053364 | Validation Loss: 0.137243
+[ 2026-10-23 11:03:23,596 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.050029 | Validation Loss: 0.127596
+[ 2026-10-23 11:03:55,656 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.048217 | Validation Loss: 0.124988
+[ 2026-10-23 11:04:27,556 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.047217 | Validation Loss: 0.121126
+[ 2026-10-23 11:04:59,611 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.046377 | Validation Loss: 0.118534
+[ 2026-10-23 11:05:31,672 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.045276 | Validation Loss: 0.113714
+[ 2026-10-23 11:06:03,418 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.044649 | Validation Loss: 0.115020
+[ 2026-10-23 11:06:35,097 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.043950 | Validation Loss: 0.105471
+[ 2026-10-23 11:07:06,897 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.042492 | Validation Loss: 0.103981
+[ 2026-10-23 11:07:38,913 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.042145 | Validation Loss: 0.100905
+[ 2026-10-23 11:08:10,772 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.041695 | Validation Loss: 0.100347
+[ 2026-10-23 11:08:42,815 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.040734 | Validation Loss: 0.096413
+[ 2026-10-23 11:09:14,607 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.040455 | Validation Loss: 0.096757
+[ 2026-10-23 11:09:46,683 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.041735 | Validation Loss: 0.097820
+[ 2026-10-23 11:10:18,472 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.040194 | Validation Loss: 0.094567
+[ 2026-10-23 11:10:50,274 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.039875 | Validation Loss: 0.093123
+[ 2026-10-23 11:11:22,256 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.039679 | Validation Loss: 0.093208
+[ 2026-10-23 11:11:40,367 ] 253 root - INFO - GRU Autoencoder completed for machine-2-8 | Test windows: 23644
+[ 2026-10-23 11:12:20,700 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.414054 | Validation Loss: 0.318150
+[ 2026-10-23 11:12:58,525 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.294123 | Validation Loss: 0.269664
+[ 2026-10-23 11:13:36,462 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.276995 | Validation Loss: 0.257089
+[ 2026-10-23 11:14:14,304 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.266198 | Validation Loss: 0.242195
+[ 2026-10-23 11:14:51,922 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.259983 | Validation Loss: 0.228223
+[ 2026-10-23 11:15:29,996 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.256765 | Validation Loss: 0.227903
+[ 2026-10-23 11:16:08,023 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.252926 | Validation Loss: 0.220990
+[ 2026-10-23 11:16:45,902 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.249728 | Validation Loss: 0.218144
+[ 2026-10-23 11:17:23,985 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.248178 | Validation Loss: 0.221601
+[ 2026-10-23 11:18:01,724 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.247622 | Validation Loss: 0.215747
+[ 2026-10-23 11:18:39,820 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.245874 | Validation Loss: 0.214106
+[ 2026-10-23 11:19:17,616 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.244822 | Validation Loss: 0.214864
+[ 2026-10-23 11:19:55,203 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.244981 | Validation Loss: 0.213122
+[ 2026-10-23 11:20:33,239 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.243864 | Validation Loss: 0.213256
+[ 2026-10-23 11:21:11,146 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.243442 | Validation Loss: 0.212911
+[ 2026-10-23 11:21:49,078 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.243421 | Validation Loss: 0.218504
+[ 2026-10-23 11:22:26,949 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.243096 | Validation Loss: 0.214402
+[ 2026-10-23 11:23:04,736 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.242583 | Validation Loss: 0.211433
+[ 2026-10-23 11:23:42,314 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.241683 | Validation Loss: 0.211455
+[ 2026-10-23 11:24:20,189 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.242173 | Validation Loss: 0.210359
+[ 2026-10-23 11:24:42,132 ] 253 root - INFO - GRU Autoencoder completed for machine-2-9 | Test windows: 28663
+[ 2026-10-23 11:25:23,180 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.400129 | Validation Loss: 0.295492
+[ 2026-10-23 11:26:03,020 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.311745 | Validation Loss: 0.279328
+[ 2026-10-23 11:26:43,477 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.300100 | Validation Loss: 0.273236
+[ 2026-10-23 11:27:20,628 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.297601 | Validation Loss: 0.271831
+[ 2026-10-23 11:28:01,027 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.296613 | Validation Loss: 0.270957
+[ 2026-10-23 11:28:41,202 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.295611 | Validation Loss: 0.269520
+[ 2026-10-23 11:29:21,638 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.293007 | Validation Loss: 0.264117
+[ 2026-10-23 11:30:02,148 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.288650 | Validation Loss: 0.260774
+[ 2026-10-23 11:30:42,642 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.286394 | Validation Loss: 0.257797
+[ 2026-10-23 11:31:22,812 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.283872 | Validation Loss: 0.256725
+[ 2026-10-23 11:32:02,182 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.282064 | Validation Loss: 0.253777
+[ 2026-10-23 11:32:39,498 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.280583 | Validation Loss: 0.251816
+[ 2026-10-23 11:33:19,882 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.279380 | Validation Loss: 0.250466
+[ 2026-10-23 11:34:00,311 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.278004 | Validation Loss: 0.248769
+[ 2026-10-23 11:34:40,990 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.277223 | Validation Loss: 0.248399
+[ 2026-10-23 11:35:17,368 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.275795 | Validation Loss: 0.246981
+[ 2026-10-23 11:35:58,044 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.274862 | Validation Loss: 0.245257
+[ 2026-10-23 11:36:35,875 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.273632 | Validation Loss: 0.245322
+[ 2026-10-23 11:37:13,112 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.272138 | Validation Loss: 0.242791
+[ 2026-10-23 11:37:53,887 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.271611 | Validation Loss: 0.241328
+[ 2026-10-23 11:38:16,336 ] 253 root - INFO - GRU Autoencoder completed for machine-3-1 | Test windows: 28641
+[ 2026-10-23 11:38:51,825 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.431057 | Validation Loss: 0.127736
+[ 2026-10-23 11:39:25,387 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.276659 | Validation Loss: 0.096402
+[ 2026-10-23 11:39:59,022 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.244424 | Validation Loss: 0.086265
+[ 2026-10-23 11:40:32,179 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.230134 | Validation Loss: 0.079313
+[ 2026-10-23 11:41:05,468 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.221648 | Validation Loss: 0.075335
+[ 2026-10-23 11:41:38,620 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.216997 | Validation Loss: 0.073312
+[ 2026-10-23 11:42:11,952 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.213949 | Validation Loss: 0.070939
+[ 2026-10-23 11:42:45,566 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.211624 | Validation Loss: 0.069998
+[ 2026-10-23 11:43:19,286 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.210088 | Validation Loss: 0.069960
+[ 2026-10-23 11:43:52,592 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.209061 | Validation Loss: 0.067857
+[ 2026-10-23 11:44:26,035 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.207377 | Validation Loss: 0.067916
+[ 2026-10-23 11:44:59,469 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.208159 | Validation Loss: 0.067389
+[ 2026-10-23 11:45:32,820 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.205660 | Validation Loss: 0.066982
+[ 2026-10-23 11:46:06,241 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.206084 | Validation Loss: 0.066616
+[ 2026-10-23 11:46:39,272 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.204678 | Validation Loss: 0.066474
+[ 2026-10-23 11:47:12,790 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.203718 | Validation Loss: 0.066264
+[ 2026-10-23 11:47:46,670 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.202596 | Validation Loss: 0.066171
+[ 2026-10-23 11:48:20,353 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.205882 | Validation Loss: 0.064550
+[ 2026-10-23 11:48:53,837 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.201702 | Validation Loss: 0.065343
+[ 2026-10-23 11:49:27,357 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.202633 | Validation Loss: 0.062703
+[ 2026-10-23 11:49:45,677 ] 253 root - INFO - GRU Autoencoder completed for machine-3-10 | Test windows: 23634
+[ 2026-10-23 11:50:27,834 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.264260 | Validation Loss: 0.160324
+[ 2026-10-23 11:51:08,167 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.201985 | Validation Loss: 0.151190
+[ 2026-10-23 11:51:49,385 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.197153 | Validation Loss: 0.147261
+[ 2026-10-23 11:52:30,033 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.195624 | Validation Loss: 0.145837
+[ 2026-10-23 11:53:10,318 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.194626 | Validation Loss: 0.144717
+[ 2026-10-23 11:53:51,083 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.193062 | Validation Loss: 0.142091
+[ 2026-10-23 11:54:31,790 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.189198 | Validation Loss: 0.139653
+[ 2026-10-23 11:55:10,536 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.188147 | Validation Loss: 0.139177
+[ 2026-10-23 11:55:51,536 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.187807 | Validation Loss: 0.139098
+[ 2026-10-23 11:56:31,702 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.187618 | Validation Loss: 0.138793
+[ 2026-10-23 11:57:12,568 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.187487 | Validation Loss: 0.138656
+[ 2026-10-23 11:57:52,612 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.187393 | Validation Loss: 0.138598
+[ 2026-10-23 11:58:30,069 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.187288 | Validation Loss: 0.138522
+[ 2026-10-23 11:59:10,510 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.187210 | Validation Loss: 0.138546
+[ 2026-10-23 11:59:51,301 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.187077 | Validation Loss: 0.138290
+[ 2026-10-23 12:00:32,324 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.186978 | Validation Loss: 0.138309
+[ 2026-10-23 12:01:13,532 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.186897 | Validation Loss: 0.138098
+[ 2026-10-23 12:01:54,176 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.186816 | Validation Loss: 0.138085
+[ 2026-10-23 12:02:34,640 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.186750 | Validation Loss: 0.138078
+[ 2026-10-23 12:03:15,344 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.186663 | Validation Loss: 0.137871
+[ 2026-10-23 12:03:37,819 ] 253 root - INFO - GRU Autoencoder completed for machine-3-11 | Test windows: 28637
+[ 2026-10-23 12:04:13,227 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.563024 | Validation Loss: 1.090307
+[ 2026-10-23 12:04:45,776 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.486334 | Validation Loss: 1.081283
+[ 2026-10-23 12:05:18,708 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.475615 | Validation Loss: 1.052682
+[ 2026-10-23 12:05:52,719 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.471665 | Validation Loss: 1.029343
+[ 2026-10-23 12:06:25,943 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.469109 | Validation Loss: 1.018391
+[ 2026-10-23 12:06:58,990 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.467615 | Validation Loss: 1.009719
+[ 2026-10-23 12:07:32,026 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.466613 | Validation Loss: 1.005325
+[ 2026-10-23 12:08:05,556 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.465658 | Validation Loss: 0.995208
+[ 2026-10-23 12:08:38,140 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.464375 | Validation Loss: 0.989728
+[ 2026-10-23 12:09:11,193 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.460275 | Validation Loss: 0.989131
+[ 2026-10-23 12:09:44,028 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.456259 | Validation Loss: 0.975690
+[ 2026-10-23 12:10:16,687 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.454409 | Validation Loss: 0.970916
+[ 2026-10-23 12:10:49,824 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.452956 | Validation Loss: 0.969616
+[ 2026-10-23 12:11:21,957 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.451689 | Validation Loss: 0.973605
+[ 2026-10-23 12:11:36,657 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.450393 | Validation Loss: 0.971934
+[ 2026-10-23 12:11:49,196 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.447246 | Validation Loss: 0.976235
+[ 2026-10-23 12:12:01,749 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.443319 | Validation Loss: 0.978972
+[ 2026-10-23 12:12:14,421 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.434335 | Validation Loss: 0.969446
+[ 2026-10-23 12:12:27,185 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.432066 | Validation Loss: 0.978016
+[ 2026-10-23 12:12:39,770 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.419505 | Validation Loss: 0.968537
+[ 2026-10-23 12:12:47,876 ] 253 root - INFO - GRU Autoencoder completed for machine-3-2 | Test windows: 23644
+[ 2026-10-23 12:13:02,455 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.523643 | Validation Loss: 0.286641
+[ 2026-10-23 12:13:15,659 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.411030 | Validation Loss: 0.260823
+[ 2026-10-23 12:13:28,842 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.375191 | Validation Loss: 0.242551
+[ 2026-10-23 12:13:41,780 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.358993 | Validation Loss: 0.234060
+[ 2026-10-23 12:13:54,932 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.352178 | Validation Loss: 0.227797
+[ 2026-10-23 12:14:08,180 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.347442 | Validation Loss: 0.225154
+[ 2026-10-23 12:14:21,195 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.344096 | Validation Loss: 0.222146
+[ 2026-10-23 12:14:34,140 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.340218 | Validation Loss: 0.219264
+[ 2026-10-23 12:14:47,196 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.335978 | Validation Loss: 0.221988
+[ 2026-10-23 12:15:00,344 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.333036 | Validation Loss: 0.222123
+[ 2026-10-23 12:15:13,319 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.325649 | Validation Loss: 0.219333
+[ 2026-10-23 12:15:35,292 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.320769 | Validation Loss: 0.217934
+[ 2026-10-23 12:16:09,005 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.313092 | Validation Loss: 0.218031
+[ 2026-10-23 12:16:42,731 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.307022 | Validation Loss: 0.220697
+[ 2026-10-23 12:17:16,646 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.305618 | Validation Loss: 0.219927
+[ 2026-10-23 12:17:50,144 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.300771 | Validation Loss: 0.216242
+[ 2026-10-23 12:18:23,734 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.297945 | Validation Loss: 0.216097
+[ 2026-10-23 12:18:57,599 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.297176 | Validation Loss: 0.216627
+[ 2026-10-23 12:19:31,424 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.296137 | Validation Loss: 0.218698
+[ 2026-10-23 12:20:04,879 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.295229 | Validation Loss: 0.215570
+[ 2026-10-23 12:20:22,912 ] 253 root - INFO - GRU Autoencoder completed for machine-3-3 | Test windows: 23644
+[ 2026-10-23 12:20:57,259 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.487320 | Validation Loss: 0.443499
+[ 2026-10-23 12:21:29,327 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.387013 | Validation Loss: 0.413241
+[ 2026-10-23 12:22:01,630 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.355514 | Validation Loss: 0.400789
+[ 2026-10-23 12:22:33,737 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.342582 | Validation Loss: 0.397956
+[ 2026-10-23 12:23:05,483 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.334157 | Validation Loss: 0.388049
+[ 2026-10-23 12:23:37,258 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.332116 | Validation Loss: 0.384169
+[ 2026-10-23 12:24:09,570 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.327866 | Validation Loss: 0.383589
+[ 2026-10-23 12:24:41,120 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.325850 | Validation Loss: 0.381454
+[ 2026-10-23 12:25:12,861 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.325952 | Validation Loss: 0.378981
+[ 2026-10-23 12:25:45,019 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.323531 | Validation Loss: 0.377949
+[ 2026-10-23 12:26:17,094 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.322071 | Validation Loss: 0.377806
+[ 2026-10-23 12:26:48,467 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.317958 | Validation Loss: 0.375566
+[ 2026-10-23 12:27:20,029 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.314586 | Validation Loss: 0.372437
+[ 2026-10-23 12:27:52,176 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.311410 | Validation Loss: 0.368329
+[ 2026-10-23 12:28:23,939 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.307084 | Validation Loss: 0.363979
+[ 2026-10-23 12:28:56,074 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.304501 | Validation Loss: 0.364285
+[ 2026-10-23 12:29:27,627 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.303112 | Validation Loss: 0.361838
+[ 2026-10-23 12:29:59,600 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.300190 | Validation Loss: 0.357767
+[ 2026-10-23 12:30:31,241 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.297505 | Validation Loss: 0.356609
+[ 2026-10-23 12:31:02,975 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.296577 | Validation Loss: 0.356020
+[ 2026-10-23 12:31:21,188 ] 253 root - INFO - GRU Autoencoder completed for machine-3-4 | Test windows: 23628
+[ 2026-10-23 12:31:58,328 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.416327 | Validation Loss: 0.301589
+[ 2026-10-23 12:32:30,767 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.324129 | Validation Loss: 0.277536
+[ 2026-10-23 12:33:04,213 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.301151 | Validation Loss: 0.270974
+[ 2026-10-23 12:33:36,815 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.290842 | Validation Loss: 0.264658
+[ 2026-10-23 12:34:11,710 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.281606 | Validation Loss: 0.263110
+[ 2026-10-23 12:34:43,929 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.277875 | Validation Loss: 0.258810
+[ 2026-10-23 12:34:57,223 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.268071 | Validation Loss: 0.252830
+[ 2026-10-23 12:35:11,968 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.253264 | Validation Loss: 0.261012
+[ 2026-10-23 12:35:24,537 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.240877 | Validation Loss: 0.249396
+[ 2026-10-23 12:35:39,196 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.237953 | Validation Loss: 0.247876
+[ 2026-10-23 12:35:56,204 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.229833 | Validation Loss: 0.241823
+[ 2026-10-23 12:36:12,270 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.225970 | Validation Loss: 0.243259
+[ 2026-10-23 12:36:28,629 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.225725 | Validation Loss: 0.240825
+[ 2026-10-23 12:36:42,403 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.224844 | Validation Loss: 0.238749
+[ 2026-10-23 12:36:58,580 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.221524 | Validation Loss: 0.238145
+[ 2026-10-23 12:37:14,661 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.220831 | Validation Loss: 0.238833
+[ 2026-10-23 12:37:30,479 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.220884 | Validation Loss: 0.235978
+[ 2026-10-23 12:37:46,092 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.229068 | Validation Loss: 0.237231
+[ 2026-10-23 12:37:58,258 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.217880 | Validation Loss: 0.236830
+[ 2026-10-23 12:38:12,448 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.218932 | Validation Loss: 0.234826
+[ 2026-10-23 12:38:21,958 ] 253 root - INFO - GRU Autoencoder completed for machine-3-5 | Test windows: 23632
+[ 2026-10-23 12:38:42,457 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.266416 | Validation Loss: 0.227284
+[ 2026-10-23 12:39:00,788 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.180662 | Validation Loss: 0.210781
+[ 2026-10-23 12:39:19,456 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.168442 | Validation Loss: 0.197898
+[ 2026-10-23 12:39:38,274 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.152924 | Validation Loss: 0.183113
+[ 2026-10-23 12:39:56,435 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.141881 | Validation Loss: 0.175573
+[ 2026-10-23 12:40:11,629 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.135276 | Validation Loss: 0.176048
+[ 2026-10-23 12:40:29,861 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.132745 | Validation Loss: 0.164403
+[ 2026-10-23 12:40:48,219 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.130392 | Validation Loss: 0.162874
+[ 2026-10-23 12:41:07,276 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.128436 | Validation Loss: 0.161553
+[ 2026-10-23 12:41:25,520 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.127604 | Validation Loss: 0.162831
+[ 2026-10-23 12:41:44,105 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.126860 | Validation Loss: 0.158245
+[ 2026-10-23 12:42:02,744 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.126313 | Validation Loss: 0.157400
+[ 2026-10-23 12:42:20,712 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.124660 | Validation Loss: 0.156741
+[ 2026-10-23 12:42:40,190 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.124934 | Validation Loss: 0.156344
+[ 2026-10-23 12:42:59,309 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.124495 | Validation Loss: 0.156376
+[ 2026-10-23 12:43:18,417 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.123196 | Validation Loss: 0.155319
+[ 2026-10-23 12:43:37,435 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.123239 | Validation Loss: 0.154813
+[ 2026-10-23 12:43:58,077 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.122911 | Validation Loss: 0.158432
+[ 2026-10-23 12:44:17,481 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.123019 | Validation Loss: 0.153395
+[ 2026-10-23 12:44:37,060 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.121420 | Validation Loss: 0.152525
+[ 2026-10-23 12:44:49,481 ] 253 root - INFO - GRU Autoencoder completed for machine-3-6 | Test windows: 28667
+[ 2026-10-23 12:45:12,572 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.360890 | Validation Loss: 0.208167
+[ 2026-10-23 12:45:35,882 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.266647 | Validation Loss: 0.193278
+[ 2026-10-23 12:45:54,824 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.250043 | Validation Loss: 0.189524
+[ 2026-10-23 12:46:16,186 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.246102 | Validation Loss: 0.188620
+[ 2026-10-23 12:46:36,507 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.244389 | Validation Loss: 0.187893
+[ 2026-10-23 12:46:57,375 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.243420 | Validation Loss: 0.187571
+[ 2026-10-23 12:47:18,470 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.242350 | Validation Loss: 0.186766
+[ 2026-10-23 12:47:37,629 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.240017 | Validation Loss: 0.184646
+[ 2026-10-23 12:47:56,252 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.238703 | Validation Loss: 0.184096
+[ 2026-10-23 12:48:16,508 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.237902 | Validation Loss: 0.184143
+[ 2026-10-23 12:48:35,890 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.237601 | Validation Loss: 0.183398
+[ 2026-10-23 12:48:55,583 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.236927 | Validation Loss: 0.183459
+[ 2026-10-23 12:49:22,620 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.237026 | Validation Loss: 0.183140
+[ 2026-10-23 12:49:47,882 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.236618 | Validation Loss: 0.183357
+[ 2026-10-23 12:50:08,421 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.236485 | Validation Loss: 0.182946
+[ 2026-10-23 12:50:32,256 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.236055 | Validation Loss: 0.182824
+[ 2026-10-23 12:50:54,500 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.235929 | Validation Loss: 0.183254
+[ 2026-10-23 12:51:19,703 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.236206 | Validation Loss: 0.182759
+[ 2026-10-23 12:51:41,631 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.235832 | Validation Loss: 0.182725
+[ 2026-10-23 12:52:04,054 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.235580 | Validation Loss: 0.182602
+[ 2026-10-23 12:52:16,848 ] 253 root - INFO - GRU Autoencoder completed for machine-3-7 | Test windows: 28646
+[ 2026-10-23 12:52:39,043 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.417178 | Validation Loss: 0.309733
+[ 2026-10-23 12:53:02,696 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.310058 | Validation Loss: 0.273909
+[ 2026-10-23 12:53:23,716 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.292443 | Validation Loss: 0.261039
+[ 2026-10-23 12:53:46,352 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.286119 | Validation Loss: 0.253049
+[ 2026-10-23 12:54:08,289 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.278138 | Validation Loss: 0.239713
+[ 2026-10-23 12:54:29,163 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.274325 | Validation Loss: 0.242252
+[ 2026-10-23 12:54:51,335 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.271936 | Validation Loss: 0.236421
+[ 2026-10-23 12:55:11,928 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.269679 | Validation Loss: 0.232418
+[ 2026-10-23 12:55:35,349 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.267147 | Validation Loss: 0.232876
+[ 2026-10-23 12:55:58,144 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.266187 | Validation Loss: 0.234341
+[ 2026-10-23 12:56:23,276 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.264820 | Validation Loss: 0.232569
+[ 2026-10-23 12:56:51,328 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.263516 | Validation Loss: 0.231226
+[ 2026-10-23 12:57:18,969 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.262944 | Validation Loss: 0.229728
+[ 2026-10-23 12:57:41,595 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.263544 | Validation Loss: 0.239006
+[ 2026-10-23 12:58:05,611 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.263080 | Validation Loss: 0.228974
+[ 2026-10-23 12:58:26,709 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.261552 | Validation Loss: 0.228448
+[ 2026-10-23 12:58:47,239 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.260565 | Validation Loss: 0.227592
+[ 2026-10-23 12:59:08,018 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.260340 | Validation Loss: 0.228173
+[ 2026-10-23 12:59:28,630 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.259747 | Validation Loss: 0.225498
+[ 2026-10-23 12:59:50,899 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.260334 | Validation Loss: 0.227581
+[ 2026-10-23 13:00:03,368 ] 253 root - INFO - GRU Autoencoder completed for machine-3-8 | Test windows: 28645
+[ 2026-10-23 13:00:23,659 ] 147 root - INFO - Epoch 1/20 | Train Loss: 0.420121 | Validation Loss: 0.297400
+[ 2026-10-23 13:00:42,829 ] 147 root - INFO - Epoch 2/20 | Train Loss: 0.325817 | Validation Loss: 0.283702
+[ 2026-10-23 13:01:02,422 ] 147 root - INFO - Epoch 3/20 | Train Loss: 0.314978 | Validation Loss: 0.279884
+[ 2026-10-23 13:01:21,262 ] 147 root - INFO - Epoch 4/20 | Train Loss: 0.310798 | Validation Loss: 0.277482
+[ 2026-10-23 13:01:41,069 ] 147 root - INFO - Epoch 5/20 | Train Loss: 0.308134 | Validation Loss: 0.273951
+[ 2026-10-23 13:02:00,295 ] 147 root - INFO - Epoch 6/20 | Train Loss: 0.304776 | Validation Loss: 0.271000
+[ 2026-10-23 13:02:19,749 ] 147 root - INFO - Epoch 7/20 | Train Loss: 0.302836 | Validation Loss: 0.270263
+[ 2026-10-23 13:02:39,883 ] 147 root - INFO - Epoch 8/20 | Train Loss: 0.302098 | Validation Loss: 0.269875
+[ 2026-10-23 13:02:58,574 ] 147 root - INFO - Epoch 9/20 | Train Loss: 0.301692 | Validation Loss: 0.269672
+[ 2026-10-23 13:03:18,089 ] 147 root - INFO - Epoch 10/20 | Train Loss: 0.301407 | Validation Loss: 0.269527
+[ 2026-10-23 13:03:37,092 ] 147 root - INFO - Epoch 11/20 | Train Loss: 0.301147 | Validation Loss: 0.269305
+[ 2026-10-23 13:03:55,766 ] 147 root - INFO - Epoch 12/20 | Train Loss: 0.300893 | Validation Loss: 0.269047
+[ 2026-10-23 13:04:15,698 ] 147 root - INFO - Epoch 13/20 | Train Loss: 0.300612 | Validation Loss: 0.268850
+[ 2026-10-23 13:04:34,578 ] 147 root - INFO - Epoch 14/20 | Train Loss: 0.300338 | Validation Loss: 0.268721
+[ 2026-10-23 13:04:55,149 ] 147 root - INFO - Epoch 15/20 | Train Loss: 0.300054 | Validation Loss: 0.268480
+[ 2026-10-23 13:05:15,827 ] 147 root - INFO - Epoch 16/20 | Train Loss: 0.299758 | Validation Loss: 0.268162
+[ 2026-10-23 13:05:37,513 ] 147 root - INFO - Epoch 17/20 | Train Loss: 0.299457 | Validation Loss: 0.267927
+[ 2026-10-23 13:06:00,542 ] 147 root - INFO - Epoch 18/20 | Train Loss: 0.298964 | Validation Loss: 0.266977
+[ 2026-10-23 13:06:20,190 ] 147 root - INFO - Epoch 19/20 | Train Loss: 0.297468 | Validation Loss: 0.265372
+[ 2026-10-23 13:06:38,733 ] 147 root - INFO - Epoch 20/20 | Train Loss: 0.295661 | Validation Loss: 0.260931
+[ 2026-10-23 13:06:51,205 ] 253 root - INFO - GRU Autoencoder completed for machine-3-9 | Test windows: 28654
+[ 2026-10-23 13:06:51,206 ] 258 root - INFO - GRU Autoencoder training completed.
+[ 2026-10-23 13:06:51,315 ] 95 root - INFO - Component anomaly_detection recorded with status SUCCESS
+[ 2026-10-23 13:06:51,316 ] 51 root - INFO - Completed pipeline stage: anomaly_detection
+[ 2026-10-23 13:06:51,316 ] 41 root - INFO - Starting pipeline stage: threshold_management
+[ 2026-10-23 13:06:51,393 ] 67 root - WARNING - Calibration segment contains only one class. Falling back to the training-score percentile.
+[ 2026-10-23 13:06:51,447 ] 332 root - INFO - machine-1-1 | threshold=0.407909 | source=training_percentile | calibration=8526 | evaluation=19894 | evaluation F1=0.5684
+[ 2026-10-23 13:06:51,544 ] 332 root - INFO - machine-1-2 | threshold=2.712786 | source=calibration_f1 | calibration=7090 | evaluation=16545 | evaluation F1=0.3425
+[ 2026-10-23 13:06:51,636 ] 332 root - INFO - machine-1-3 | threshold=0.796033 | source=calibration_f1 | calibration=7093 | evaluation=16551 | evaluation F1=0.4267
+[ 2026-10-23 13:06:51,732 ] 332 root - INFO - machine-1-4 | threshold=0.512228 | source=calibration_f1 | calibration=7094 | evaluation=16554 | evaluation F1=0.5727
+[ 2026-10-23 13:06:51,782 ] 67 root - WARNING - Calibration segment contains only one class. Falling back to the training-score percentile.
+[ 2026-10-23 13:06:51,823 ] 332 root - INFO - machine-1-5 | threshold=1.048288 | source=training_percentile | calibration=7094 | evaluation=16553 | evaluation F1=0.3281
+[ 2026-10-23 13:06:51,924 ] 332 root - INFO - machine-1-6 | threshold=4.931679 | source=calibration_f1 | calibration=7089 | evaluation=16541 | evaluation F1=0.5226
+[ 2026-10-23 13:06:52,009 ] 332 root - INFO - machine-1-7 | threshold=0.496931 | source=calibration_f1 | calibration=7091 | evaluation=16547 | evaluation F1=0.5622
+[ 2026-10-23 13:06:52,108 ] 332 root - INFO - machine-1-8 | threshold=0.637731 | source=calibration_f1 | calibration=7092 | evaluation=16548 | evaluation F1=0.2763
+[ 2026-10-23 13:06:52,192 ] 332 root - INFO - machine-2-1 | threshold=3.049716 | source=calibration_f1 | calibration=7090 | evaluation=16545 | evaluation F1=0.4069
+[ 2026-10-23 13:06:52,260 ] 67 root - WARNING - Calibration segment contains only one class. Falling back to the training-score percentile.
+[ 2026-10-23 13:06:52,294 ] 332 root - INFO - machine-2-2 | threshold=1.602761 | source=training_percentile | calibration=7092 | evaluation=16549 | evaluation F1=0.4999
+[ 2026-10-23 13:06:52,388 ] 332 root - INFO - machine-2-3 | threshold=2.452810 | source=calibration_f1 | calibration=7089 | evaluation=16541 | evaluation F1=0.6228
+[ 2026-10-23 13:06:52,497 ] 332 root - INFO - machine-2-4 | threshold=0.285365 | source=calibration_f1 | calibration=7089 | evaluation=16541 | evaluation F1=0.4027
+[ 2026-10-23 13:06:52,578 ] 332 root - INFO - machine-2-5 | threshold=0.570279 | source=calibration_f1 | calibration=7089 | evaluation=16541 | evaluation F1=0.7754
+[ 2026-10-23 13:06:52,653 ] 332 root - INFO - machine-2-6 | threshold=2.506895 | source=calibration_f1 | calibration=8605 | evaluation=20079 | evaluation F1=0.3795
+[ 2026-10-23 13:06:52,754 ] 332 root - INFO - machine-2-7 | threshold=0.449665 | source=calibration_f1 | calibration=7091 | evaluation=16546 | evaluation F1=0.8385
+[ 2026-10-23 13:06:52,813 ] 67 root - WARNING - Calibration segment contains only one class. Falling back to the training-score percentile.
+[ 2026-10-23 13:06:52,859 ] 332 root - INFO - machine-2-8 | threshold=0.332744 | source=training_percentile | calibration=7093 | evaluation=16551 | evaluation F1=0.0575
+[ 2026-10-23 13:06:52,925 ] 67 root - WARNING - Calibration segment contains only one class. Falling back to the training-score percentile.
+[ 2026-10-23 13:06:52,967 ] 332 root - INFO - machine-2-9 | threshold=1.755147 | source=training_percentile | calibration=8598 | evaluation=20065 | evaluation F1=0.7688
+[ 2026-10-23 13:06:53,066 ] 332 root - INFO - machine-3-1 | threshold=0.815633 | source=calibration_f1 | calibration=8592 | evaluation=20049 | evaluation F1=0.0828
+[ 2026-10-23 13:06:53,158 ] 332 root - INFO - machine-3-10 | threshold=0.220292 | source=calibration_f1 | calibration=7090 | evaluation=16544 | evaluation F1=0.2286
+[ 2026-10-23 13:06:53,202 ] 67 root - WARNING - Calibration segment contains only one class. Falling back to the training-score percentile.
+[ 2026-10-23 13:06:53,247 ] 332 root - INFO - machine-3-11 | threshold=0.617295 | source=training_percentile | calibration=8591 | evaluation=20046 | evaluation F1=0.0800
+[ 2026-10-23 13:06:53,337 ] 332 root - INFO - machine-3-2 | threshold=0.970276 | source=calibration_f1 | calibration=7093 | evaluation=16551 | evaluation F1=0.5033
+[ 2026-10-23 13:06:53,422 ] 332 root - INFO - machine-3-3 | threshold=0.786926 | source=calibration_f1 | calibration=7093 | evaluation=16551 | evaluation F1=0.6510
+[ 2026-10-23 13:06:53,514 ] 332 root - INFO - machine-3-4 | threshold=206.381622 | source=calibration_f1 | calibration=7088 | evaluation=16540 | evaluation F1=0.2457
+[ 2026-10-23 13:06:53,599 ] 332 root - INFO - machine-3-5 | threshold=4.563473 | source=calibration_f1 | calibration=7089 | evaluation=16543 | evaluation F1=0.1423
+[ 2026-10-23 13:06:53,684 ] 332 root - INFO - machine-3-6 | threshold=3.132518 | source=calibration_f1 | calibration=8600 | evaluation=20067 | evaluation F1=0.5457
+[ 2026-10-23 13:06:53,734 ] 67 root - WARNING - Calibration segment contains only one class. Falling back to the training-score percentile.
+[ 2026-10-23 13:06:53,779 ] 332 root - INFO - machine-3-7 | threshold=0.823675 | source=training_percentile | calibration=8593 | evaluation=20053 | evaluation F1=0.1550
+[ 2026-10-23 13:06:53,822 ] 67 root - WARNING - Calibration segment contains only one class. Falling back to the training-score percentile.
+[ 2026-10-23 13:06:53,866 ] 332 root - INFO - machine-3-8 | threshold=1.016432 | source=training_percentile | calibration=8593 | evaluation=20052 | evaluation F1=0.2913
+[ 2026-10-23 13:06:53,962 ] 332 root - INFO - machine-3-9 | threshold=0.655423 | source=calibration_f1 | calibration=8596 | evaluation=20058 | evaluation F1=0.0611
+[ 2026-10-23 13:06:53,969 ] 392 root - INFO - Chronological threshold calibration completed. Full-length predictions preserved; evaluation metrics computed on the held-out final segment.
+[ 2026-10-23 13:06:53,983 ] 95 root - INFO - Component threshold_management recorded with status SUCCESS
+[ 2026-10-23 13:06:53,983 ] 51 root - INFO - Completed pipeline stage: threshold_management
+[ 2026-10-23 13:06:53,984 ] 41 root - INFO - Starting pipeline stage: drift_detection
+[ 2026-10-23 13:06:53,985 ] 133 root - INFO - Calculating drift for machine-1-1
+[ 2026-10-23 13:06:55,063 ] 133 root - INFO - Calculating drift for machine-1-2
+[ 2026-10-23 13:06:55,895 ] 133 root - INFO - Calculating drift for machine-1-3
+[ 2026-10-23 13:06:56,784 ] 133 root - INFO - Calculating drift for machine-1-4
+[ 2026-10-23 13:06:57,647 ] 133 root - INFO - Calculating drift for machine-1-5
+[ 2026-10-23 13:06:58,462 ] 133 root - INFO - Calculating drift for machine-1-6
+[ 2026-10-23 13:06:59,356 ] 133 root - INFO - Calculating drift for machine-1-7
+[ 2026-10-23 13:07:00,216 ] 133 root - INFO - Calculating drift for machine-1-8
+[ 2026-10-23 13:07:01,007 ] 133 root - INFO - Calculating drift for machine-2-1
+[ 2026-10-23 13:07:01,867 ] 133 root - INFO - Calculating drift for machine-2-2
+[ 2026-10-23 13:07:02,708 ] 133 root - INFO - Calculating drift for machine-2-3
+[ 2026-10-23 13:07:03,419 ] 133 root - INFO - Calculating drift for machine-2-4
+[ 2026-10-23 13:07:04,285 ] 133 root - INFO - Calculating drift for machine-2-5
+[ 2026-10-23 13:07:05,246 ] 133 root - INFO - Calculating drift for machine-2-6
+[ 2026-10-23 13:07:06,187 ] 133 root - INFO - Calculating drift for machine-2-7
+[ 2026-10-23 13:07:06,977 ] 133 root - INFO - Calculating drift for machine-2-8
+[ 2026-10-23 13:07:07,839 ] 133 root - INFO - Calculating drift for machine-2-9
+[ 2026-10-23 13:07:08,779 ] 133 root - INFO - Calculating drift for machine-3-1
+[ 2026-10-23 13:07:09,722 ] 133 root - INFO - Calculating drift for machine-3-10
+[ 2026-10-23 13:07:10,445 ] 133 root - INFO - Calculating drift for machine-3-11
+[ 2026-10-23 13:07:11,427 ] 133 root - INFO - Calculating drift for machine-3-2
+[ 2026-10-23 13:07:12,230 ] 133 root - INFO - Calculating drift for machine-3-3
+[ 2026-10-23 13:07:13,158 ] 133 root - INFO - Calculating drift for machine-3-4
+[ 2026-10-23 13:07:13,921 ] 133 root - INFO - Calculating drift for machine-3-5
+[ 2026-10-23 13:07:14,633 ] 133 root - INFO - Calculating drift for machine-3-6
+[ 2026-10-23 13:07:15,549 ] 133 root - INFO - Calculating drift for machine-3-7
+[ 2026-10-23 13:07:16,595 ] 133 root - INFO - Calculating drift for machine-3-8
+[ 2026-10-23 13:07:17,539 ] 133 root - INFO - Calculating drift for machine-3-9
+[ 2026-10-23 13:07:18,488 ] 213 root - INFO - Drift detection completed successfully.
+[ 2026-10-23 13:07:18,514 ] 95 root - INFO - Component drift_detection recorded with status SUCCESS
+[ 2026-10-23 13:07:18,514 ] 51 root - INFO - Completed pipeline stage: drift_detection
+[ 2026-10-23 13:07:18,514 ] 41 root - INFO - Starting pipeline stage: model_evaluation
+[ 2026-10-23 13:07:18,562 ] 149 root - INFO - Evaluated machine-1-1: F1=0.5684
+[ 2026-10-23 13:07:18,619 ] 149 root - INFO - Evaluated machine-1-2: F1=0.3425
+[ 2026-10-23 13:07:18,704 ] 149 root - INFO - Evaluated machine-1-3: F1=0.4267
+[ 2026-10-23 13:07:18,796 ] 149 root - INFO - Evaluated machine-1-4: F1=0.5727
+[ 2026-10-23 13:07:18,852 ] 149 root - INFO - Evaluated machine-1-5: F1=0.3281
+[ 2026-10-23 13:07:18,936 ] 149 root - INFO - Evaluated machine-1-6: F1=0.5226
+[ 2026-10-23 13:07:18,991 ] 149 root - INFO - Evaluated machine-1-7: F1=0.5622
+[ 2026-10-23 13:07:19,059 ] 149 root - INFO - Evaluated machine-1-8: F1=0.2763
+[ 2026-10-23 13:07:19,124 ] 149 root - INFO - Evaluated machine-2-1: F1=0.4069
+[ 2026-10-23 13:07:19,174 ] 149 root - INFO - Evaluated machine-2-2: F1=0.4999
+[ 2026-10-23 13:07:19,233 ] 149 root - INFO - Evaluated machine-2-3: F1=0.6228
+[ 2026-10-23 13:07:19,324 ] 149 root - INFO - Evaluated machine-2-4: F1=0.4027
+[ 2026-10-23 13:07:19,450 ] 149 root - INFO - Evaluated machine-2-5: F1=0.7754
+[ 2026-10-23 13:07:19,521 ] 149 root - INFO - Evaluated machine-2-6: F1=0.3795
+[ 2026-10-23 13:07:19,590 ] 149 root - INFO - Evaluated machine-2-7: F1=0.8385
+[ 2026-10-23 13:07:19,661 ] 149 root - INFO - Evaluated machine-2-8: F1=0.0575
+[ 2026-10-23 13:07:19,733 ] 149 root - INFO - Evaluated machine-2-9: F1=0.7688
+[ 2026-10-23 13:07:19,790 ] 149 root - INFO - Evaluated machine-3-1: F1=0.0828
+[ 2026-10-23 13:07:19,857 ] 149 root - INFO - Evaluated machine-3-10: F1=0.2286
+[ 2026-10-23 13:07:19,912 ] 149 root - INFO - Evaluated machine-3-11: F1=0.0800
+[ 2026-10-23 13:07:19,959 ] 149 root - INFO - Evaluated machine-3-2: F1=0.5033
+[ 2026-10-23 13:07:20,020 ] 149 root - INFO - Evaluated machine-3-3: F1=0.6510
+[ 2026-10-23 13:07:20,064 ] 149 root - INFO - Evaluated machine-3-4: F1=0.2457
+[ 2026-10-23 13:07:20,117 ] 149 root - INFO - Evaluated machine-3-5: F1=0.1423
+[ 2026-10-23 13:07:20,159 ] 149 root - INFO - Evaluated machine-3-6: F1=0.5457
+[ 2026-10-23 13:07:20,228 ] 149 root - INFO - Evaluated machine-3-7: F1=0.1550
+[ 2026-10-23 13:07:20,299 ] 149 root - INFO - Evaluated machine-3-8: F1=0.2913
+[ 2026-10-23 13:07:20,349 ] 149 root - INFO - Evaluated machine-3-9: F1=0.0611
+[ 2026-10-23 13:07:20,350 ] 181 root - INFO - Model evaluation completed.
+[ 2026-10-23 13:07:20,367 ] 95 root - INFO - Component model_evaluation recorded with status SUCCESS
+[ 2026-10-23 13:07:20,367 ] 51 root - INFO - Completed pipeline stage: model_evaluation
+[ 2026-10-23 13:07:20,367 ] 41 root - INFO - Starting pipeline stage: model_registry
+[ 2026-10-23 13:07:21,145 ] 111 root - INFO - Model artifacts registered successfully as v5
+[ 2026-10-23 13:07:21,157 ] 95 root - INFO - Component model_registry recorded with status SUCCESS
+[ 2026-10-23 13:07:21,158 ] 51 root - INFO - Completed pipeline stage: model_registry
+[ 2026-10-23 13:07:21,158 ] 41 root - INFO - Starting pipeline stage: event_correlation
+[ 2026-10-23 13:07:21,179 ] 110 root - INFO - Event correlation completed for machine-1-1 | Anomalous windows: 8147 | Events: 59
+[ 2026-10-23 13:07:21,191 ] 110 root - INFO - Event correlation completed for machine-1-2 | Anomalous windows: 724 | Events: 16
+[ 2026-10-23 13:07:21,204 ] 110 root - INFO - Event correlation completed for machine-1-3 | Anomalous windows: 1579 | Events: 13
+[ 2026-10-23 13:07:21,215 ] 110 root - INFO - Event correlation completed for machine-1-4 | Anomalous windows: 2491 | Events: 18
+[ 2026-10-23 13:07:21,226 ] 110 root - INFO - Event correlation completed for machine-1-5 | Anomalous windows: 2543 | Events: 57
+[ 2026-10-23 13:07:21,239 ] 110 root - INFO - Event correlation completed for machine-1-6 | Anomalous windows: 13348 | Events: 70
+[ 2026-10-23 13:07:21,252 ] 110 root - INFO - Event correlation completed for machine-1-7 | Anomalous windows: 2567 | Events: 20
+[ 2026-10-23 13:07:21,265 ] 110 root - INFO - Event correlation completed for machine-1-8 | Anomalous windows: 6483 | Events: 47
+[ 2026-10-23 13:07:21,276 ] 110 root - INFO - Event correlation completed for machine-2-1 | Anomalous windows: 533 | Events: 8
+[ 2026-10-23 13:07:21,292 ] 110 root - INFO - Event correlation completed for machine-2-2 | Anomalous windows: 2367 | Events: 29
+[ 2026-10-23 13:07:21,303 ] 110 root - INFO - Event correlation completed for machine-2-3 | Anomalous windows: 591 | Events: 10
+[ 2026-10-23 13:07:21,309 ] 110 root - INFO - Event correlation completed for machine-2-4 | Anomalous windows: 8948 | Events: 42
+[ 2026-10-23 13:07:21,333 ] 110 root - INFO - Event correlation completed for machine-2-5 | Anomalous windows: 2635 | Events: 27
+[ 2026-10-23 13:07:21,351 ] 110 root - INFO - Event correlation completed for machine-2-6 | Anomalous windows: 626 | Events: 11
+[ 2026-10-23 13:07:21,364 ] 110 root - INFO - Event correlation completed for machine-2-7 | Anomalous windows: 1764 | Events: 28
+[ 2026-10-23 13:07:21,385 ] 110 root - INFO - Event correlation completed for machine-2-8 | Anomalous windows: 7392 | Events: 14
+[ 2026-10-23 13:07:21,404 ] 110 root - INFO - Event correlation completed for machine-2-9 | Anomalous windows: 3410 | Events: 34
+[ 2026-10-23 13:07:21,421 ] 110 root - INFO - Event correlation completed for machine-3-1 | Anomalous windows: 6343 | Events: 45
+[ 2026-10-23 13:07:21,444 ] 110 root - INFO - Event correlation completed for machine-3-10 | Anomalous windows: 10569 | Events: 21
+[ 2026-10-23 13:07:21,463 ] 110 root - INFO - Event correlation completed for machine-3-11 | Anomalous windows: 8697 | Events: 8
+[ 2026-10-23 13:07:21,477 ] 110 root - INFO - Event correlation completed for machine-3-2 | Anomalous windows: 1716 | Events: 34
+[ 2026-10-23 13:07:21,488 ] 110 root - INFO - Event correlation completed for machine-3-3 | Anomalous windows: 1788 | Events: 31
+[ 2026-10-23 13:07:21,500 ] 110 root - INFO - Event correlation completed for machine-3-4 | Anomalous windows: 1070 | Events: 8
+[ 2026-10-23 13:07:21,513 ] 110 root - INFO - Event correlation completed for machine-3-5 | Anomalous windows: 6997 | Events: 12
+[ 2026-10-23 13:07:21,523 ] 110 root - INFO - Event correlation completed for machine-3-6 | Anomalous windows: 1467 | Events: 21
+[ 2026-10-23 13:07:21,544 ] 110 root - INFO - Event correlation completed for machine-3-7 | Anomalous windows: 7904 | Events: 9
+[ 2026-10-23 13:07:21,569 ] 110 root - INFO - Event correlation completed for machine-3-8 | Anomalous windows: 8601 | Events: 37
+[ 2026-10-23 13:07:21,580 ] 110 root - INFO - Event correlation completed for machine-3-9 | Anomalous windows: 8221 | Events: 29
+[ 2026-10-23 13:07:21,580 ] 117 root - INFO - Event correlation completed successfully.
+[ 2026-10-23 13:07:21,591 ] 95 root - INFO - Component event_correlation recorded with status SUCCESS
+[ 2026-10-23 13:07:21,591 ] 51 root - INFO - Completed pipeline stage: event_correlation
+[ 2026-10-23 13:07:21,591 ] 41 root - INFO - Starting pipeline stage: root_cause_analysis
+[ 2026-10-23 13:07:29,827 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-1 | Events: 59
+[ 2026-10-23 13:07:36,828 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-2 | Events: 16
+[ 2026-10-23 13:07:42,480 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-3 | Events: 13
+[ 2026-10-23 13:07:48,894 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-4 | Events: 18
+[ 2026-10-23 13:07:56,102 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-5 | Events: 57
+[ 2026-10-23 13:08:02,148 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-6 | Events: 70
+[ 2026-10-23 13:08:10,071 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-7 | Events: 20
+[ 2026-10-23 13:08:17,074 ] 177 root - INFO - Root-cause candidate analysis completed for machine-1-8 | Events: 47
+[ 2026-10-23 13:08:24,082 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-1 | Events: 8
+[ 2026-10-23 13:08:30,096 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-2 | Events: 29
+[ 2026-10-23 13:08:36,245 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-3 | Events: 10
+[ 2026-10-23 13:08:42,418 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-4 | Events: 42
+[ 2026-10-23 13:08:50,154 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-5 | Events: 27
+[ 2026-10-23 13:08:58,748 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-6 | Events: 11
+[ 2026-10-23 13:09:06,357 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-7 | Events: 28
+[ 2026-10-23 13:09:14,863 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-8 | Events: 14
+[ 2026-10-23 13:09:21,602 ] 177 root - INFO - Root-cause candidate analysis completed for machine-2-9 | Events: 34
+[ 2026-10-23 13:09:28,247 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-1 | Events: 45
+[ 2026-10-23 13:09:34,454 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-10 | Events: 21
+[ 2026-10-23 13:09:41,543 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-11 | Events: 8
+[ 2026-10-23 13:09:47,456 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-2 | Events: 34
+[ 2026-10-23 13:09:53,357 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-3 | Events: 31
+[ 2026-10-23 13:09:59,193 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-4 | Events: 8
+[ 2026-10-23 13:10:05,137 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-5 | Events: 12
+[ 2026-10-23 13:10:12,077 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-6 | Events: 21
+[ 2026-10-23 13:10:19,729 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-7 | Events: 9
+[ 2026-10-23 13:10:26,400 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-8 | Events: 37
+[ 2026-10-23 13:10:33,143 ] 177 root - INFO - Root-cause candidate analysis completed for machine-3-9 | Events: 29
+[ 2026-10-23 13:10:33,143 ] 182 root - INFO - Root-cause candidate analysis completed successfully.
+[ 2026-10-23 13:10:33,188 ] 95 root - INFO - Component root_cause_analysis recorded with status SUCCESS
+[ 2026-10-23 13:10:33,188 ] 51 root - INFO - Completed pipeline stage: root_cause_analysis
+[ 2026-10-23 13:10:33,188 ] 41 root - INFO - Starting pipeline stage: uncertainty_analysis
+[ 2026-10-23 13:10:36,659 ] 116 root - INFO - OOD analysis completed for machine-1-1 | OOD windows: 4445 | Threshold: 0.633588
+[ 2026-10-23 13:10:39,164 ] 116 root - INFO - OOD analysis completed for machine-1-2 | OOD windows: 485 | Threshold: 0.594502
+[ 2026-10-23 13:10:41,614 ] 116 root - INFO - OOD analysis completed for machine-1-3 | OOD windows: 206 | Threshold: 0.640286
+[ 2026-10-23 13:10:44,146 ] 116 root - INFO - OOD analysis completed for machine-1-4 | OOD windows: 591 | Threshold: 0.607684
+[ 2026-10-23 13:10:46,671 ] 116 root - INFO - OOD analysis completed for machine-1-5 | OOD windows: 888 | Threshold: 0.615002
+[ 2026-10-23 13:10:49,659 ] 116 root - INFO - OOD analysis completed for machine-1-6 | OOD windows: 6255 | Threshold: 0.609742
+[ 2026-10-23 13:10:52,375 ] 116 root - INFO - OOD analysis completed for machine-1-7 | OOD windows: 336 | Threshold: 0.632209
+[ 2026-10-23 13:10:55,242 ] 116 root - INFO - OOD analysis completed for machine-1-8 | OOD windows: 1066 | Threshold: 0.605087
+[ 2026-10-23 13:10:58,065 ] 116 root - INFO - OOD analysis completed for machine-2-1 | OOD windows: 920 | Threshold: 0.590256
+[ 2026-10-23 13:11:00,859 ] 116 root - INFO - OOD analysis completed for machine-2-2 | OOD windows: 1791 | Threshold: 0.595007
+[ 2026-10-23 13:11:03,604 ] 116 root - INFO - OOD analysis completed for machine-2-3 | OOD windows: 555 | Threshold: 0.592566
+[ 2026-10-23 13:11:06,355 ] 116 root - INFO - OOD analysis completed for machine-2-4 | OOD windows: 290 | Threshold: 0.621689
+[ 2026-10-23 13:11:09,260 ] 116 root - INFO - OOD analysis completed for machine-2-5 | OOD windows: 374 | Threshold: 0.585935
+[ 2026-10-23 13:11:12,495 ] 116 root - INFO - OOD analysis completed for machine-2-6 | OOD windows: 1232 | Threshold: 0.597270
+[ 2026-10-23 13:11:15,064 ] 116 root - INFO - OOD analysis completed for machine-2-7 | OOD windows: 504 | Threshold: 0.590307
+[ 2026-10-23 13:11:17,425 ] 116 root - INFO - OOD analysis completed for machine-2-8 | OOD windows: 2909 | Threshold: 0.627261
+[ 2026-10-23 13:11:20,573 ] 116 root - INFO - OOD analysis completed for machine-2-9 | OOD windows: 3073 | Threshold: 0.620921
+[ 2026-10-23 13:11:24,150 ] 116 root - INFO - OOD analysis completed for machine-3-1 | OOD windows: 14722 | Threshold: 0.559461
+[ 2026-10-23 13:11:26,718 ] 116 root - INFO - OOD analysis completed for machine-3-10 | OOD windows: 866 | Threshold: 0.656134
+[ 2026-10-23 13:11:30,115 ] 116 root - INFO - OOD analysis completed for machine-3-11 | OOD windows: 6785 | Threshold: 0.528875
+[ 2026-10-23 13:11:32,416 ] 116 root - INFO - OOD analysis completed for machine-3-2 | OOD windows: 0 | Threshold: 0.640936
+[ 2026-10-23 13:11:35,288 ] 116 root - INFO - OOD analysis completed for machine-3-3 | OOD windows: 124 | Threshold: 0.576327
+[ 2026-10-23 13:11:38,601 ] 116 root - INFO - OOD analysis completed for machine-3-4 | OOD windows: 574 | Threshold: 0.555112
+[ 2026-10-23 13:11:41,871 ] 116 root - INFO - OOD analysis completed for machine-3-5 | OOD windows: 10184 | Threshold: 0.595475
+[ 2026-10-23 13:11:45,447 ] 116 root - INFO - OOD analysis completed for machine-3-6 | OOD windows: 2724 | Threshold: 0.589739
+[ 2026-10-23 13:11:48,519 ] 116 root - INFO - OOD analysis completed for machine-3-7 | OOD windows: 145 | Threshold: 0.630080
+[ 2026-10-23 13:11:51,962 ] 116 root - INFO - OOD analysis completed for machine-3-8 | OOD windows: 3604 | Threshold: 0.613281
+[ 2026-10-23 13:11:55,272 ] 116 root - INFO - OOD analysis completed for machine-3-9 | OOD windows: 16924 | Threshold: 0.563356
+[ 2026-10-23 13:11:55,272 ] 122 root - INFO - Uncertainty and OOD analysis completed successfully.
+[ 2026-10-23 13:11:55,362 ] 95 root - INFO - Component uncertainty_analysis recorded with status SUCCESS
+[ 2026-10-23 13:11:55,363 ] 51 root - INFO - Completed pipeline stage: uncertainty_analysis
+[ 2026-10-23 13:11:55,363 ] 41 root - INFO - Starting pipeline stage: explainability
+[ 2026-10-23 13:11:55,363 ] 90 root - INFO - Starting Explainability
+[ 2026-10-23 13:14:28,435 ] 252 root - INFO - Explainability completed: 28 reports generated
+[ 2026-10-23 13:14:28,505 ] 95 root - INFO - Component explainability recorded with status SUCCESS
+[ 2026-10-23 13:14:28,505 ] 51 root - INFO - Completed pipeline stage: explainability
+[ 2026-10-23 13:14:28,505 ] 41 root - INFO - Starting pipeline stage: incident_management
+[ 2026-10-23 13:14:34,610 ] 179 root - INFO - Incident management completed: 758 incidents created.
+[ 2026-10-23 13:14:34,635 ] 95 root - INFO - Component incident_management recorded with status SUCCESS
+[ 2026-10-23 13:14:34,637 ] 51 root - INFO - Completed pipeline stage: incident_management
+[ 2026-10-23 13:14:34,637 ] 41 root - INFO - Starting pipeline stage: decision_engine
+[ 2026-10-23 13:14:34,637 ] 95 root - INFO - Starting Decision Engine
+[ 2026-10-23 13:14:35,397 ] 150 root - INFO - Decision Engine completed successfully
+[ 2026-10-23 13:14:35,397 ] 151 root - INFO - Saved decisions to artifacts\decision_engine\decisions\decisions.json
+[ 2026-10-23 13:14:35,435 ] 95 root - INFO - Component decision_engine recorded with status SUCCESS
+[ 2026-10-23 13:14:35,435 ] 51 root - INFO - Completed pipeline stage: decision_engine
+[ 2026-10-23 13:14:35,435 ] 41 root - INFO - Starting pipeline stage: alert_management
+[ 2026-10-23 13:14:35,436 ] 41 root - INFO - Starting Alert Manager
+[ 2026-10-23 13:14:35,513 ] 125 root - INFO - Alert Manager completed: 261 new alerts, 497 duplicates suppressed
+[ 2026-10-23 13:14:35,531 ] 95 root - INFO - Component alert_management recorded with status SUCCESS
+[ 2026-10-23 13:14:35,532 ] 51 root - INFO - Completed pipeline stage: alert_management
+[ 2026-10-23 13:14:35,539 ] 223 root - INFO - OpsGuard AI training pipeline completed successfully

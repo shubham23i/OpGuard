@@ -274,8 +274,15 @@ class ConfigurationManager:
 
         return ModelEvaluationConfig(
             root_dir=Path(config.root_dir),
-            input_label_dir=Path(config.input_label_dir),
-            input_prediction_dir=Path(config.input_prediction_dir),
+            
+            input_label_dir = Path(
+                "artifacts/threshold_manager/evaluation/labels"
+            ),
+
+            input_prediction_dir = Path(
+                "artifacts/threshold_manager/evaluation/predictions"
+            )
+            ,
             output_dir=Path(config.output_dir),
         )
 
